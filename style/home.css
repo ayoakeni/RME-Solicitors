@@ -123,18 +123,15 @@ nav ul li a:hover{
 }
 .immg{
   width: 700px;
-  height: auto;
+  height: 650.34px;
   background-color: lightgrey;
-}
-.immg img{
-  width: 100%;
 }
 .text-mo{
   width: 90%;
 }
 .text-mo .testimon{
   color: #191B20;
-  font-size: 48px;
+  font-size: 58px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-style: normal;
