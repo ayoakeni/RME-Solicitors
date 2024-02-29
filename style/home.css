@@ -1,0 +1,427 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #F2F4F3;
+}
+nav{
+  position: fixed;
+  top: -1px;
+  background-color: #4169E1;
+  width: 100%;
+  z-index: 2;
+}
+.nav-bar{
+  width: 80%;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+}
+nav ul li{
+  display: flex;
+}
+nav ul li a{
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  width: 115px;
+  line-height: 46px;
+  cursor: pointer;
+}
+nav ul li a:hover{
+  background-color: #fff;
+  border-radius: 24px;
+  color: #000;
+}
+.hero{
+  display: flex;
+  margin-top: 5.2rem;
+  width: 100%;
+  background-image: linear-gradient(-280deg,  #F8F3EA, #F2F4F3, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/hero-img.jpg);
+  background-size: calc(1050px);
+  background-position: calc(120%);
+  background-repeat: no-repeat;
+  height: auto;
+}
+.welcoming-info{
+  height: auto;
+  width: 80%;
+  margin: 70px auto;
+}
+.layer-info{
+  width: 56.3%;
+}
+.welcoming-info .layer-info span{
+  font-size: 18px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.layer-info .bgtext{
+  margin-bottom: 40px;
+}
+.layer-info .bgtext h1{
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-bottom: 12px;
+}
+.layer-info .bgtext h1 span{
+  color: #9D8341;
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.layer-info .bgtext p{
+  font-size: 20px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  width: 78%;
+}
+.layer-info button{
+  height: 53px;
+  width: 220px;
+  background-color: #4169E1;
+  border-radius: 12px;
+  border:none;
+}
+.layer-info button a{
+  color: #fff;
+  font-size: 18px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+.testimonial{
+  display: flex;
+  column-gap: 30px;
+  width: 80%;
+  margin: 50px auto;
+}
+.immg{
+  width: 700px;
+  height: auto;
+  background-color: lightgrey;
+}
+.immg img{
+  width: 100%;
+}
+.text-mo{
+  width: 90%;
+}
+.text-mo .testimon{
+  color: #191B20;
+  font-size: 48px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.text-mo .text-tes{
+  margin-top: 30px
+}
+.text-mo .text-tes1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.quote{
+  font-size: 160px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #15347D;
+  line-height: 90px !important;
+}
+.txt-text{
+  width: 75%;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;;
+  height: fit-content;
+  padding: 23px;
+}
+.text-tes2{
+  width: 85%;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #15347D;
+  height: fit-content;
+  padding: 23px;
+  margin-bottom: 20px;
+}
+.text-tes3{
+  float: right;
+  width: 96%;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  height: fit-content;
+  padding: 23px;
+}
+.news{
+  margin-bottom: 50px;
+}
+.news h4{
+  font-size: 58px;
+  font-family: "Playfair Display", serif;
+  text-transform: lowercase;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.news .news-text{
+  width: 80%;
+  margin: auto;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  display: flex;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination{
+  position: relative !important;
+  bottom: 0 !important;
+}
+.news-text-box{
+  width: 470px;
+  background-color: #FFFFFF;
+}
+.news-text .img-text{
+  width: 100%;
+  height: 215px;
+  background-color: lightgray;
+  margin-bottom: 10px;
+}
+.news-box{
+  padding: 4px 8px;
+}
+.date{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.date span{
+  color: #5B4913;
+  font-size: 12px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.news-box .advantages{
+  color: #5B4913;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: normal;
+  display: block;
+  margin-bottom: 10px;
+}
+.news-box a{
+  color: #5B4913;
+  font-size: 14px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background: none;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.news-box i{
+  font-size: 12px;
+}
+
+.book-consult{
+  width: 80%;
+  border-radius: 16px;
+  background-color: #D8D9FF;
+  margin: 30px auto;
+  padding: 40px;
+}
+.book-consult h4{
+  color: #15347D;
+  font-size: 57px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 27px;
+}
+.book-consult button{
+  height: 45px;
+  width: 186px;
+  background-color: #4169E1;
+  border-radius: 24px;
+  border:none;
+}
+.book-consult button a{
+  color: #fff;
+  font-size: 14px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 24px;
+}
+
+.enquiry-footer{
+  background-color: #D7DCEE;
+}
+.make-enquiry{
+  width: 80%;
+  margin: auto;
+  padding: 50px 0px;
+}
+.make-enquiry h4{
+  text-align: center;
+  font-size: 58px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 65px;
+}
+.contact-box{
+  display: flex;
+  gap: 52px;
+  margin-bottom: 24px;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.input-box input{
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 24px 12px;
+  border: none;
+  outline-color: #4169E1;
+}
+form textarea{
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  resize: none;
+  padding: 24px 12px;
+  height: 211px;
+  border: none;
+  outline-color: #4169E1;
+  margin-bottom: 42px;
+}
+form .submit{
+  color: #F4F4F4;
+  font-size: 14px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  height: 65px;
+  border-radius: 24px;
+  border: none;
+  background-color: #4169E1;
+  cursor: pointer;
+}
+footer{
+  padding: 77px 120px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  background-color: #15347D;
+}
+.foot-text{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+.foot-text1{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.foot-text1 span{
+  color: #F4F4F4;
+  font-size: 20px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.foot-text1 ul{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.foot-text1 ul a{
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+}
+.foot-text2{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.foot-text2 a{
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+}
+.copy-right{
+  padding-top: 28px;
+  border-top: 1px solid #E1C5A1;
+  text-align: center;
+}
+.copy-right span{
+  color: #FFFFFF;
+  font-size: 12px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
