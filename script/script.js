@@ -7,6 +7,11 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  // breakpoints:{
+  //   0: {
+  //     slidesPerView: 1,
+  //   }
+  // },
   mousewheel: true,
   keyboard: true,
 });
