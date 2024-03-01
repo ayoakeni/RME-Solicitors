@@ -16,7 +16,7 @@ var swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
-// Popup
+// Popup Script
 let Popup = document.getElementById("popup");
 
 function openPopup(){
