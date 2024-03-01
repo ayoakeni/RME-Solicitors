@@ -15,3 +15,13 @@ var swiper = new Swiper(".mySwiper", {
   mousewheel: true,
   keyboard: true,
 });
+
+// Popup
+let Popup = document.getElementById("popup");
+
+function openPopup(){
+  Popup.classList.add("openPopup");
+}
+function closePopup(){
+  Popup.classList.remove("openPopup");
+}

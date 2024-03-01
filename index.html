@@ -51,7 +51,7 @@
             </p>
           </div>
           <button>
-            <a href="#">Book a Consultation</a>
+            <a href="#book">Book a Consultation</a>
           </button>
         </div>
       </div>
@@ -184,11 +184,19 @@
       <div class="book-consult">
         <h4>Schedule an <br> immigration consultation <br> with RME Solicitors</h4>
         <button>
-          <a href="">Book a Consultation</a>
+          <a href="#">Book a Consultation</a>
         </button>
       </div>
     </main>
-    <div class="enquiry-footer">
+    <div class="pop-back" id="popup">
+      <div class="popup" >
+        <i class="fa-solid fa-circle-check"></i>
+        <h2>Thank You!</h2>
+        <p>Your details has been submitted sucessfully. We will reply to you soon!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+    <div id="book" class="enquiry-footer">
       <div class="make-enquiry">
         <h4>Make an Enquiry</h4>
         <form action="https://api.web3forms.com/submit" method="POST">
@@ -204,7 +212,7 @@
             </div>
           </div>
           <textarea name="Message" id="" placeholder="Message" required></textarea>
-          <input class="submit" type="submit" value="Book a Consultation">
+          <input class="submit" onclick="openPopup()" type="submit" value="Book a Consultation">
         </form>
       </div>
       <footer>
@@ -231,6 +239,6 @@
       </footer>
     </div>
     <!-- Swiper -->
-    <script src="script/script.js"></script>
+    <script defer src="script/script.js"></script>
   </body>
 </html>

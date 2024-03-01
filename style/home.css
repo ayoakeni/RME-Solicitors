@@ -299,7 +299,73 @@ nav ul li a:hover{
   text-decoration: none;
   padding: 14px 24px;
 }
-
+.pop-back{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transform: translate(0%) scale(0.1);
+  transition: transform 0.4s, top 0.4s;
+  z-index: 1;
+  visibility: hidden;
+}
+.popup{
+  width: 400px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+  top: 35%;
+  left: 35%;
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup .fa-circle-check{
+  font-size: 100px;
+  font-weight: 500;
+  font-style: normal;
+  color: #4169E1;
+  background-color: #fff;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.openPopup{
+  transform: translate(0%) scale(1);
+  visibility: visible;
+}
+.popup h2{
+  font-size: 38px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 30px 0 10px;
+}
+.popup p{
+  font-size: 18px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.popup button{
+  font-size: 18px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0px;
+  background: #4169E1;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
 .enquiry-footer{
   background-color: #D7DCEE;
 }
