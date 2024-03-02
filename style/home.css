@@ -474,7 +474,7 @@ footer{
   flex-direction: column;
   gap: 5px;
 }
-.foot-text2 a{
+.foot-text2 span{
   color: #FFFFFF;
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
@@ -554,7 +554,7 @@ footer{
   .foot-text img{
     width: 100px;
   }
-  .foot-text2 a{
+  .foot-text2 span{
     font-size: 18px;
   }
   .copy-right{
