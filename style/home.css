@@ -496,7 +496,7 @@ footer{
 }
 
 /* mobile */
-@media screen and (max-width: 90px) {
+@media screen and (max-width: 908px) {
   .popup{
     width: 80%;
     top: 30%;
