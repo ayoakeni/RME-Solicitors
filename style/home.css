@@ -321,6 +321,8 @@ nav a.active, a:hover{
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  display: flex;
   background-color: transparent;
   transform: translate(0%) scale(0.1);
   transition: transform 0.4s, top 0.4s;
@@ -331,9 +333,7 @@ nav a.active, a:hover{
   width: 400px;
   background-color: #fff;
   border-radius: 6px;
-  position: relative;
-  top: 28%;
-  left: 35%;
+  margin: auto;
   text-align: center;
   padding: 30px;
   color: #333;
@@ -587,8 +587,6 @@ footer{
 @media screen and (max-width: 908px) {
   .popup{
     width: 312px;
-    top: 30%;
-    left: 10%;
     padding: 20px;
   }
   .popup .fa-circle-check{
