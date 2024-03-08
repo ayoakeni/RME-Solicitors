@@ -623,9 +623,6 @@ footer{
     flex-direction: column;
     gap: 24px;
   }
-  form textarea{
-    margin-bottom: 24px;
-  }
   footer{
     padding: 20px;
     border-top-right-radius: 25px;

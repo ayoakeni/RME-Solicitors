@@ -57,7 +57,7 @@ const bodyMessage = `Full Name: ${name.value}<br> Email: ${email.value}
       else{
         Swal.fire({
           title: "Oops!",
-          text: "Unable to send. Please try again.",
+          text: "Unable to send emails. Please try again later.",
           icon: "error"
         })
       }
