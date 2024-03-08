@@ -201,20 +201,34 @@
     <div id="book" class="enquiry-footer">
       <div class="make-enquiry">
         <h4>Make an Enquiry</h4>
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="10e13bb9-29d3-49d1-9310-b6f00566de42">
+        <form>
           <div class="contact-box">
             <div class="input-box">
-              <input type="text" name="Name" required placeholder="Name">
-              <input type="email" name="Email" required placeholder="Email">
+              <div class="input-field field">
+                <input class="item" type="text" name="Name" id="name" placeholder="Name">
+                <div class="error-text">Name can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <input class="item" type="email" name="Email" id="email" placeholder="Email">
+                <div class="error-text email">Email can't be blank</div>
+              </div>
             </div>
             <div class="input-box">
-              <input type="text" name="Surname" required placeholder="Surname">
-              <input type="text" name="Phone number" required placeholder="Phone Number">
+              <div class="input-field field">
+                <input class="item" type="text" name="Surname" id="surname" placeholder="Surname">
+                <div class="error-text">Surname can't be blank</div>
+              </div>
+              <div class="input-field field">
+                <input class="item" type="text" name="Phone number" id="phone" placeholder="Phone Number">
+                <div class="error-text">Phone number can't be blank</div>
+              </div>
             </div>
           </div>
-          <textarea name="Message" id="" placeholder="Message" required></textarea>
-          <input class="submit" onclick="openPopup()" type="submit" value="Book a Consultation">
+          <div class="textarea-field field">
+            <textarea class="item" name="Message" id="message" placeholder="Message"></textarea>
+            <div class="error-text">Message can't be blank</div>
+          </div>
+          <input class="submit" type="submit" value="Book a Consultation">
         </form>
       </div>
       <footer>
@@ -242,7 +256,11 @@
         </div>
       </footer>
     </div>
-    <!-- Swiper -->
-    <script defer src="script/script.js"></script>
+    <!-- Smtpjs Email Script -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Sweetaler Script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Java Script -->
+    <script src="script/script.js"></script>
   </body>
 </html>
