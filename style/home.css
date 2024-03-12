@@ -539,6 +539,8 @@ footer{
   }
 }
 /* mobile */
+
+/* Nav bar */
 @media (max-width: 954px){
   nav{
     padding: 0;
@@ -584,6 +586,9 @@ footer{
     left: 0;
   }
 }
+/* Ending of Nav bar */
+
+/* Slides */
 @media (max-width: 940px){
   .news-text-box{
     max-width: 100%;
@@ -600,7 +605,16 @@ footer{
     padding: 4px 8px;
   }
 }
+/* Ending of slides */
+
 @media screen and (max-width: 908px) {
+  .news{
+    margin-bottom: 30px;
+  }
+  .news h4{
+    font-size: 33px;
+    margin-bottom: 25px;
+  }
   .popup{
     width: 312px;
     padding: 20px;
