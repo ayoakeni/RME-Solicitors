@@ -42,7 +42,7 @@ nav ul li a{
   border-radius: 24px;
   text-decoration: none;
 }
-nav a.active, a:hover{
+nav a.active, ul a:hover{
   background: #fff;
   color: #000;
   transition: all .5s ;
@@ -63,8 +63,56 @@ nav a.active, a:hover{
 #check{
   display: none;
 }
+.drop-service:hover > .dp-service{
+  background: #fff;
+  color: #000;
+  transition: all .5s ;
+}
+.chevron{
+  margin-left: 10px;
+}
+.drop-down{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #0082e6;
+  width: 200px;
+  padding: 16px 0px;
+  transition: all .7s;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+}
+.drop-down li{
+  line-height: 45px;
+  margin: 0px;
+  border-bottom: 2px solid white;
+}
+.drop-down li:last-child{
+  border-bottom: none;
+} 
+li:hover > ul{
+  visibility: visible;
+  opacity: 1;
+}
+.drop-down li a{
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  display: flex;
+  padding: 0px 24px;
+  border-radius: 0;
+}
+.drop-down li a:hover{
+  background-color: #C6AE78;
+}
 .hero{
   display: flex;
+  flex-direction: column;
   margin-top: 80px;
   width: 100%;
   background-image: linear-gradient(-280deg,  #F8F3EA, #F2F4F3, 
@@ -131,6 +179,61 @@ nav a.active, a:hover{
   font-style: normal;
   text-decoration: none;
   padding: 15px 30px;
+}
+.hero-options{
+  position: relative;
+  top: 1.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+.hero-opt{
+  background-color: #F8F3EA;
+  border-radius: 14.6px;
+  box-shadow: 1px 10px 8px lightgray;
+}
+.hero-opt a{
+  color: #C6AE78;
+  font-size: 29.2px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 11px;
+  padding: 10.95px 21.9px;
+}
+.welcome-note{
+  background-color: #F0F1F4;
+  background-image: url(../images/r-note-welcome.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.notes-box{
+  width: 80%;
+  margin: auto;
+  padding: 80px 55px;
+}
+.welcome-note h2{
+  color: #4269E1;
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.welcome-note p{
+  color: black;
+  font-size: 20px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .testimonial{
   display: flex;
