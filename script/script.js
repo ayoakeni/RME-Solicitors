@@ -1,23 +1,50 @@
-// Swiper
+// Swiper slide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 40,
   cssMode: true,
   autoplay:{delay: 3000},
+  // slidesPerView: 1,
+  // spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // breakpoints:{
-  //   0: {
-  //     slidesPerView: 1,
-  //   }
-  // },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  800: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1045: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1115: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    1366: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    }
+  },
   mousewheel: true,
   keyboard: true,
 });
 
-// Popup Script
+// Popup message for sucessfull submit
 let Popup = document.getElementById("popup");
 
 function openPopup(){
@@ -64,7 +91,7 @@ const bodyMessage = `Full Name: ${name.value}<br> Email: ${email.value}
     }
   );
 }
-
+// For errors or wrong inputs
 function checkInputs() {
   const items = document.querySelectorAll(".item");
 
@@ -94,6 +121,7 @@ function checkInputs() {
     });
   }
 }
+// For wrong email or invalid email
 function checkEmail() {
   const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
 
@@ -115,7 +143,7 @@ function checkEmail() {
     email.parentElement.classList.remove("error");
   }
 }
-
+// Submit button
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();

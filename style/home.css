@@ -249,6 +249,22 @@ nav a.active, a:hover{
 .news-box{
   padding: 4px 8px;
 }
+@media (max-width: 940px){
+  .news-text-box{
+    max-width: 100%;
+    background-color: #FFFFFF;
+  }
+  .news-text .img-text{
+    width: 100%;
+    height: 215px;
+  }
+  .news-text .img-text img{
+    width: 100%;
+  }
+  .news-box{
+    padding: 4px 8px;
+  }
+}
 .date{
   display: flex;
   justify-content: space-between;
