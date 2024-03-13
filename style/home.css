@@ -92,6 +92,9 @@ nav a.active, ul a:hover{
 .drop-down li:last-child{
   border-bottom: none;
 } 
+.check-drop{
+  display: none;
+}
 li:hover > ul{
   visibility: visible;
   opacity: 1;
@@ -681,12 +684,55 @@ footer{
   nav ul li a{
     font-size: 20px;
   }
-  nav a.active, a:hover{
+  nav a.active, li a:hover, 
+  .drop-service:hover > .dp-service{
     background: none;
     color: #0082e6;
   }
   #check:checked ~ ul{
     left: 0;
+  }
+  .drop-service .l-1{
+    top: 17rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    transition: all .7s;
+  }
+  .drop-service .l-2{
+    top: 22rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    transition: all .7s;
+  }
+  .drop-down li{
+    line-height: 70px;
+  }
+  .drop-down li:last-child{
+    border-bottom: none;
+  } 
+  li:hover > ul{
+    visibility: hidden;
+    opacity: 0;
+  }
+  #drop-1:checked ~ li .l-1{
+    visibility: visible;
+    opacity: 1;
+  }
+  #drop-2:checked ~ li .l-2{
+    visibility: visible;
+    opacity: 1;
+  }
+  .drop-down li a{
+    font-size: 20px;
+    justify-content: center;
+  }
+  .drop-down li a:hover{
+    background-color: #C6AE78;
+    color: #fff;
   }
 }
 /* Ending of Nav bar */
