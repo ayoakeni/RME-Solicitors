@@ -42,10 +42,10 @@ body{
 .loaded .loading-screen {
   opacity: 0;
 }
-.content {
+/* .content {
   opacity: 0;
   transition: opacity 0.5s;
-}
+} */
 nav{
   position: fixed;
   top: 0;
