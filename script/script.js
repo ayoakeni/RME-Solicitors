@@ -1,10 +1,13 @@
 // Loading Screen
 window.addEventListener('load', function() {
-  // Hide the loading screen
-  document.querySelector('.loading-screen').style.opacity = '0';
-  // Show the content
-  document.querySelector('.content').style.opacity = '1';
+  setTimeout(function() {
+    // Hide the loading screen
+    document.querySelector('.loading-screen').style.opacity = '0';
+    // Show the content
+    document.querySelector('.content').style.opacity = '1';
+  }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
 });
+
 
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {

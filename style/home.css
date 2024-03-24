@@ -5,6 +5,7 @@
 }
 body{
   background: #F2F4F3;
+    overflow-x: hidden;
 }
 /* Styles for the loading screen */
 .loading-screen {
