@@ -157,3 +157,62 @@ form.addEventListener("submit", (e) => {
     return false;
   }
 });
+
+// Whatsapp Chat-box
+const whatsapp = document.getElementById("whatsapp");
+const whatsappBox = document.querySelector(".whatsapp-box");
+const cancel = document.querySelector(".whatsapp-close");
+const messageBox = document.querySelector(".whatsapp-box-message");
+const timeElement = document.querySelector(".whatsapp-time");
+const textElement = document.getElementById("text");
+let initialText = "Typically replies within an hour";
+let hasTyped = false;
+
+whatsapp.addEventListener("click", () => {
+  whatsappBox.classList.toggle("active");
+
+  if (whatsappBox.classList.contains("active") && !hasTyped) {
+    typeText(initialText);
+    hasTyped = true;
+
+    // Show the message box with the loading state
+    messageBox.innerHTML = `<div class="whatsapp-loading-animation">
+     <div class="whatsapp-loading-circle"></div>
+     <div class="whatsapp-loading-circle"></div>
+     <div class="whatsapp-loading-circle"></div>
+    </div>`;
+
+    // Simulate a delay before showing the actual message
+    setTimeout(() => {
+      messageBox.innerHTML = `<span class="whatsapp-message-title">Rme Solicitors</span>
+      <span class="whatsapp-content-message">Hi there 👋<br><br> How can i help you?</span>
+      <span class="whatsapp-time">00:00</span>`;
+      updateTime();
+    }, 2500);
+  }
+});
+
+cancel.addEventListener("click", () => {
+  whatsappBox.classList.remove("active");
+});
+
+function typeText(text) {
+  let index = 0;
+  function typeNextCharacter() {
+    if (index < text.length) {
+      textElement.textContent += text[index];
+      index++;
+      setTimeout(typeNextCharacter, 50); // Adjust the speed here (milliseconds)
+    }
+  }
+  typeNextCharacter();
+}
+
+function updateTime() {
+  // Update the time to the current time
+  let now = new Date();
+  let hours = now.getHours().toString().padStart(2, "0");
+  let minutes = now.getMinutes().toString().padStart(2, "0");
+  document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
+}
+

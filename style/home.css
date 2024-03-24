@@ -12,7 +12,7 @@ nav{
   background: #4169E1;
   width: 100%;
   /* line-height: 80px; */
-  z-index: 2;
+  z-index: 3;
   padding: 0px 8%;
 }
 nav .logo{
@@ -566,8 +566,231 @@ form .submit{
   height: 65px;
   border-radius: 24px;
   border: none;
-  background-color: #4169E1;
+  background: #4169E1;
   cursor: pointer;
+}
+/* Whatsapp Chat-box */
+.whatsapp{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  height: auto;
+  z-index: 2;
+}
+.whatsapp-box {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 328px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e6e6e6;
+  box-shadow: 0px 1px 15px 0px;
+  margin: 0px 20px 20px 0px;
+  opacity: 0;
+  transform: scaleY(0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.whatsapp-box.active {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.whatsapp-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 24px 20px;
+  background: #095e54;
+}
+.whatsapp-profile{
+  position: relative;
+  background: #095e54;
+  height: 52px;
+  width: 52px;
+  border-radius: 100%;
+  font-style: normal;
+}
+.whatsapp-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.whatsapp-online-status{
+  position: absolute;
+  top: 39px;
+  left: 40px;
+  height: 12px;
+  width: 12px;
+  background: #4ad504;
+  border-radius: 100%;
+  border: 2px solid #095e54;
+}
+.whatsapp-title{
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  margin: 0px 16px;
+}
+.whatsapp-name{
+  font-size: 16px;
+  color: #fff;
+}
+.whatsapp-suggestion{
+  color: #fff;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.whatsapp-close{
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 15px;
+  color: lightgray;
+  cursor: pointer;
+}
+.whatsapp-close:hover{
+  color: #ffffff;
+}
+.whatsapp-message-box{
+  width: 100%;
+  height: 152px;
+  background: url(../images/whatsApp\ background.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 20px 20px 20px 15px;
+}
+.whatsapp-box-message{
+  position: relative;
+  float: left;
+  height: auto;
+  background: #fff;
+  padding: 7px 14px 6px;
+  border-radius: 0px 10px 10px 10px;
+}
+.whatsapp-loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+}
+.whatsapp-loading-circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background-color: black;
+  animation: chase 1s infinite linear;
+}
+.whatsapp-loading-circle:nth-child(2) {
+  animation-delay: 0.33s; /* Delay for the second circle */
+}
+.whatsapp-loading-circle:nth-child(3) {
+  animation-delay: 0.66s; /* Delay for the third circle */
+}
+@keyframes chase {
+  0%, 100% {
+      transform: scale(1);
+      background-color: black;
+  }
+  25% {
+      background-color: gray;
+  }
+  50% {
+      background-color: black;
+  }
+  75% {
+      background-color: gray;
+  }
+}
+.whatsapp-box-message::before {
+  content: '';
+  position: absolute;
+  top: -4.5px;
+  left: -9px;
+  width: 0;
+  height: 0;
+  transform: rotate(28deg);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 14px solid #fff;
+}
+.whatsapp-message-title{
+  font-size: 15px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  color: #00000066;
+}
+.whatsapp-content-message{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: "Source Sans 3", sans-serif;
+  color: #111111;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.whatsapp-time{
+  font-size: 12px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  margin: 4px -8px -4px 0;
+  color: #11111180;
+  float: right;
+}
+.whatsapp-send-field{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  background: #33a940;
+  padding: 8px 12px;
+  border-radius: 25px;
+  border: none;
+  text-decoration: none;
+  margin: auto;
+}
+.whatsapp-send-field .fa-whatsapp{
+  color: #fff;
+  font-size: 18px;
+}
+.whatsapp-start-chat{
+  color: #fff;
+  font-size: 15px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  margin: 0px 8px;
+}
+.whatsapp-toggle{
+  position: relative;
+}
+.whatsapp-button-icon{
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 100%;
+  background: #095e54;
+  margin: 0px 20px 20px;
+  cursor: pointer;
+  float: right;
+}
+.whatsapp-button-icon .fa-whatsapp{
+  font-size: 32px;
+  color: #fff;
+}
+.whatsapp-red-dot{
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  height: 10px;
+  width: 10px;
+  background: #ff0000;
+  border-radius: 100%;
 }
 footer{
   padding: 77px 120px;
@@ -757,6 +980,174 @@ footer{
 /* Ending of slides */
 
 @media screen and (max-width: 908px) {
+  .hero{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 100%;
+    background-image: linear-gradient(-280deg,  #F8F3EA, #F2F4F3, 
+    rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), 
+    rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/hero-img.jpg);
+    /* background-size: calc(1050px);
+    background-position: calc(120%); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+  }
+  .welcoming-info{
+    height: auto;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .layer-info{
+    width: 100%;
+  }
+  .welcoming-info .layer-info span{
+    font-size: 18px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .layer-info .bgtext{
+    margin-bottom: 40px;
+  }
+  .layer-info .bgtext h1{
+    font-size: 34px;
+    margin-bottom: 12px;
+  }
+  .layer-info .bgtext h1 span{
+    font-size: 34px;
+  }
+  .layer-info .bgtext p{
+    font-size: 18px;
+    width: 100%;
+  }
+  .layer-info button{
+    height: 53px;
+    width: 220px;
+    background-color: #4169E1;
+    border-radius: 12px;
+    border:none;
+  }
+  .layer-info button a{
+    color: #fff;
+    font-size: 18px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    padding: 15px 30px;
+  }
+  .hero-options{
+    position: relative;
+    top: 1.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+  }
+  .hero-opt{
+    background-color: #F8F3EA;
+    border-radius: 14.6px;
+    box-shadow: 1px 10px 8px lightgray;
+  }
+  .hero-opt a{
+    color: #C6AE78;
+    font-size: 29.2px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 11px;
+    padding: 10.95px 21.9px;
+  }
+  .notes-box{
+    width: 100%;
+    padding: 10px 40px;
+  }
+  .welcome-note h2{
+    font-size: 29px;
+    text-align: center;
+  }
+  .welcome-note p{
+    font-size: 18px;
+  }
+  .testimonial{
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+    width: 100%;
+    margin: 50px 10px;
+  }
+  .immg{
+    width: 100%;
+    height: 650.34px;
+    background-color: lightgrey;
+  }
+  .text-mo{
+    width: 90%;
+  }
+  .text-mo .testimon{
+    color: #191B20;
+    font-size: 58px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .text-mo .text-tes{
+    margin-top: 30px
+  }
+  .text-mo .text-tes1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .quote{
+    font-size: 160px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #15347D;
+    line-height: 90px !important;
+  }
+  .txt-text{
+    width: 75%;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;;
+    height: fit-content;
+    padding: 23px;
+  }
+  .text-tes2{
+    width: 88%;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #15347D;
+    height: fit-content;
+    padding: 23px;
+    margin-bottom: 20px;
+  }
+  .text-tes3{
+    float: right;
+    width: 96%;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: fit-content;
+    padding: 23px;
+  }
   .news{
     margin-bottom: 30px;
   }
