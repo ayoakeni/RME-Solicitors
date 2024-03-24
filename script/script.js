@@ -10,7 +10,6 @@ window.addEventListener('load', function() {
   }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
 });
 
-
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
