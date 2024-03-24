@@ -1,3 +1,11 @@
+// Loading Screen
+window.addEventListener('load', function() {
+  // Hide the loading screen
+  document.querySelector('.loading-screen').style.opacity = '0';
+  // Show the content
+  document.querySelector('.content').style.opacity = '1';
+});
+
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
