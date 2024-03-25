@@ -171,7 +171,7 @@ form.addEventListener("submit", (e) => {
 });
 
 // Whatsapp Chat-box
-const whatsapp = document.getElementById("whatsapp");
+const whatsapp = document.getElementById("whatsapp-btn");
 const whatsappBox = document.querySelector(".whatsapp-box");
 const cancel = document.querySelector(".whatsapp-close");
 const messageBox = document.querySelector(".whatsapp-box-message");

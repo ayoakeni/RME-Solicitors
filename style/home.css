@@ -653,15 +653,10 @@ form .submit{
   cursor: pointer;
 }
 /* Whatsapp Chat-box */
-.whatsapp{
+.whatsapp-box {
   position: fixed;
   right: 0;
   bottom: 0;
-  width: fit-content;
-  height: auto;
-  z-index: 2;
-}
-.whatsapp-box {
   display: flex;
   flex-direction: column;
   width: 360px;
@@ -670,10 +665,11 @@ form .submit{
   overflow: hidden;
   background: #e6e6e6;
   box-shadow: 0px 1px 15px 0px;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 20px 96px 0px;
   opacity: 0;
   transform: scaleY(0.1);
   transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1;
 }
 .whatsapp-box.active {
   opacity: 1;
@@ -846,10 +842,12 @@ form .submit{
   margin: 0px 8px;
 }
 .whatsapp-toggle{
-  position: relative;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .whatsapp-button-icon{
-  /* position: absolute; */
   display: flex;
   justify-content: center;
   align-items: center;
