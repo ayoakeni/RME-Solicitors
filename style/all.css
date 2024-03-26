@@ -114,7 +114,7 @@ nav ul li{
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a{
+nav ul li a, .dp-service{
   font-size: 16px;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
@@ -124,8 +124,10 @@ nav ul li a{
   padding: 14px 24px;
   border-radius: 24px;
   text-decoration: none;
+  cursor: pointer;
 }
-nav a.active, nav ul a:hover{
+nav a.active,
+nav ul a:hover{
   background: #fff;
   color: #000;
   transition: all .5s ;
@@ -150,6 +152,9 @@ nav a.active, nav ul a:hover{
   background: #fff;
   color: #000;
   transition: all .5s ;
+}
+.dp-service label{
+  cursor: pointer;
 }
 .chevron{
   margin-left: 10px;
@@ -288,7 +293,6 @@ li:hover > ul{
   font-style: normal;
   display: flex;
   align-items: center;
-  text-decoration: none;
   gap: 11px;
   padding: 11px 22px;
 }
@@ -495,6 +499,7 @@ li:hover > ul{
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-style: normal;
+  letter-spacing: -0.25px;
   margin-bottom: 27px;
 }
 .book-consult button{
@@ -759,6 +764,78 @@ footer{
   text-decoration: none;
   color: #FFFFFF;
 }
+/* About/Familiy-law/Real-estate-law/Immagration-law/Privacy-policy/Terms-of-use */
+.hero-page{
+  display: flex;
+  height: 490px;
+  background-image: url(../images/judge-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 80px;
+}
+.hero-page span{
+  color: #FFEFCA;
+  font-size: 64px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 119.8%;
+  margin: auto auto  auto 100px;
+}
+.details{
+  background-color: #F0F1F4;
+  background-image: url(../images/r-note-welcome.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.details-box{
+  width: 98%;
+  margin: auto;
+  padding: 20px 55px;
+}
+.details-term-box{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.details-text{
+  margin-top: 34px;
+}
+.details-box span{
+  color: #000000;
+  font-size: 24px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.details-box p{
+  color: #595959;
+  font-size: 20px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 15px;
+}
+.details-text li{
+  color: #595959;
+  font-size: 20px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.term-welcome{
+  padding-bottom: 60px;
+}
+.term-book-consult{
+  width: 90%;
+  background-position-x: calc(840px);
+}
 /* Whatsapp Chat-box */
 .whatsapp-box {
   position: fixed;
@@ -983,7 +1060,6 @@ footer{
   border-radius: 100%;
 }
 
-
 /* Tablet */
 @media (max-width: 1134px){
   nav{
@@ -1027,7 +1103,7 @@ footer{
     margin: 50px 0;
     line-height: 30px;
   }
-  nav ul li a{
+  nav ul li a, .dp-service{
     font-size: 20px;
   }
   nav a.active, li a:hover, 
