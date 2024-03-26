@@ -1,12 +1,14 @@
 // Popup message for sucessfull submit
-let Popup = document.getElementById("popup");
+const Popup = document.getElementById("popup");
+const closePopup = document.getElementById("close-btn");
 
 function openPopup(){
   Popup.classList.add("openPopup");
 }
-function closePopup(){
+closePopup.addEventListener("click", () => {
   Popup.classList.remove("openPopup");
-}
+});
+
 
 // Email Authentication
 const form = document.querySelector("form");

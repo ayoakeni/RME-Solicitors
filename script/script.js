@@ -56,6 +56,18 @@ var swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
+// Question-answer
+const qClick = document.querySelectorAll(".question-click");
+const qCont = document.querySelectorAll(".q-content");
+
+qClick.forEach((click, index) => {
+  click.addEventListener("click", () =>{
+    qCont[index].classList.toggle("show");
+    qCont[index].style.maxHeight = qCont[index].classList.contains("show") ? qCont[index].scrollHeight + "px" : null;
+  });
+});
+
+
 // Whatsapp Chat-box
 const whatsapp = document.getElementById("whatsapp-btn");
 const whatsappBox = document.querySelector(".whatsapp-box");
