@@ -761,6 +761,7 @@ footer{
   font-family: "Source Sans 3", sans-serif;
   font-weight: 200;
   font-style: normal;
+  width: fit-content;
   text-decoration: none;
 }
 .foot-text1-opt a:hover{
@@ -1151,6 +1152,7 @@ footer{
     text-align: center;
     left: -100%;
     transition: all .5s;
+    overflow: scroll;
   }
   nav ul li{
     display: block;
@@ -1160,7 +1162,7 @@ footer{
   nav ul li a, .dp-service{
     font-size: 20px;
   }
-  nav a.active, li a:hover, 
+  nav a.active, nav li a:hover, 
   .drop-service:hover > .dp-service{
     background: none;
     color: #0082e6;
@@ -1168,24 +1170,21 @@ footer{
   #check:checked ~ ul{
     left: 0;
   }
-  .drop-service .l-1{
-    top: 17rem;
+  .drop-service .drop-down{
+    position: relative;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: fit-content;
     transition: all .7s;
-  }
-  .drop-service .l-2{
-    top: 22rem;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: fit-content;
-    transition: all .7s;
+    display: none;
+    margin: 0px 0px 30px;
+    background-color: transparent;
   }
   .drop-down li{
-    line-height: 70px;
+    line-height: 50px;
+    border: none;
   }
   .drop-down li:last-child{
     border-bottom: none;
@@ -1194,12 +1193,9 @@ footer{
     visibility: hidden;
     opacity: 0;
   }
-  #drop-1:checked ~ li .l-1{
+  #drop:checked ~ li .drop-down{
     visibility: visible;
-    opacity: 1;
-  }
-  #drop-2:checked ~ li .l-2{
-    visibility: visible;
+    display: block;
     opacity: 1;
   }
   .drop-down li a{
@@ -1207,8 +1203,8 @@ footer{
     justify-content: center;
   }
   .drop-down li a:hover{
-    background-color: #C6AE78;
-    color: #fff;
+    background-color: transparent;
+    color: #C6AE78;
   }
 }
 /* Ending of Nav bar */
