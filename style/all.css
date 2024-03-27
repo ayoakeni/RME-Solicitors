@@ -554,22 +554,24 @@ li:hover > ul{
   font-size: 16px;
   cursor: pointer;
 }
-.q-box .q-content{
-  display: none;
-  color: #333;
+.q-box .q-content {
+  /* display: block; */
+  color: #444D4B;
   font-size: 16px;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  padding: 0px 20px 24px;
+  padding: 0px 20px 0px;
   transition: max-height 0.5s ease-in-out; 
+  max-height: 0;
   overflow: hidden;
 }
-.q-box .q-content.show{
-  display: block;
-  max-height: 20px;
+.q-box .q-content.show {
+  /* display: block; */
+  max-height: 200px; /* Set this to a value that accommodates your actual content */
 }
+
 .pop-back{
   position: fixed;
   top: 0;

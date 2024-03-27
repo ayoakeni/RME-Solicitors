@@ -63,7 +63,6 @@ const qCont = document.querySelectorAll(".q-content");
 qClick.forEach((click, index) => {
   click.addEventListener("click", () =>{
     qCont[index].classList.toggle("show");
-    qCont[index].style.maxHeight = qCont[index].classList.contains("show") ? qCont[index].scrollHeight + "px" : null;
   });
 });
 
