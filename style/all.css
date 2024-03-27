@@ -200,6 +200,7 @@ li:hover > ul{
 }
 .drop-down li a:hover{
   background-color: #C6AE78;
+  color: #fff;
 }
 .hero{
   display: flex;
