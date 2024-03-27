@@ -10,6 +10,33 @@ window.addEventListener('load', function() {
   }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
 });
 
+// Smooth scroll to anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if the URL contains an ID parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+  // Function to scroll to the target element
+  function scrollToElement(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  // Scroll to the element if ID is present in the URL
+  if (id) {
+    scrollToElement(id);
+  }
+  // Add click event listeners to all anchor tags with href starting with '#'
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent the default link behavior
+      const targetId = this.getAttribute('href').substring(1); // Get the target ID from the link's href attribute
+      scrollToElement(targetId); // Scroll to the target element
+    });
+  });
+});
+
+
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
