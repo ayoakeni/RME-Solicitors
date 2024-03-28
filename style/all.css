@@ -1083,12 +1083,6 @@ footer{
   font-weight: 600;
   margin: 0px 8px;
 }
-.whatsapp-toggle{
-  border-radius: 100%;
-  background-color: red;
-  height: fit-content;
-  width: fit-content;
-}
 .whatsapp-button-icon{
   position: fixed;
   right: 0;
