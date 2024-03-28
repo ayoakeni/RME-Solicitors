@@ -1084,12 +1084,15 @@ footer{
   margin: 0px 8px;
 }
 .whatsapp-toggle{
+  border-radius: 100%;
+  background-color: red;
+  height: fit-content;
+  width: fit-content;
+}
+.whatsapp-button-icon{
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 1;
-}
-.whatsapp-button-icon{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1098,9 +1101,9 @@ footer{
   border: none;
   border-radius: 100%;
   background: #095e54;
-  margin: 0px 20px 20px;
+  margin: 0px 20px 20px 0px;
   cursor: pointer;
-  float: right;
+  z-index: 1;
 }
 .whatsapp-button-icon .fa-whatsapp{
   font-size: 32px;
@@ -1109,7 +1112,7 @@ footer{
 .whatsapp-red-dot{
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 5px;
   height: 10px;
   width: 10px;
   background: #ff0000;
