@@ -128,22 +128,6 @@ nav ul a:hover{
   color: #000;
   transition: all .5s ;
 }
-.checkbtn{
-  font-size: 30px;
-  font-family: "Source Sans 3", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  color: #fff;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
 .drop-service:hover > .dp-service{
   background: #fff;
   color: #000;
@@ -1235,8 +1219,36 @@ footer{
     background: none;
     color: #0082e6;
   }
-  #check:checked ~ ul{
+  .menu-checkbox{
+    display: none;
+  }
+  .menu-checkbox:checked ~ ul{
     right: 0;
+  }
+  .menu-bar{
+    display: flex;
+    float: right;
+    height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .menu-icon, .close-icon {
+    font-size: 30px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    margin: auto;
+  }
+  .close-icon {
+    display: none !important;
+  }
+  .menu-checkbox:checked + .menu-bar .menu-icon {
+    display: none;
+  }
+  .menu-checkbox:checked + .menu-bar .close-icon {
+    display: inline-block !important;
   }
   .drop-service .drop-down{
     position: relative;
