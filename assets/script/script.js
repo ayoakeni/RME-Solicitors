@@ -106,7 +106,6 @@ let hasTyped = false;
 
 whatsapp.addEventListener("click", () => {
   whatsappBox.classList.toggle("active");
-  toggleContent()
 
   if (whatsappBox.classList.contains("active") && !hasTyped) {
     typeText(initialText);
@@ -153,19 +152,18 @@ function updateTime() {
   document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
 }
 
+// Whatsapp icon chat widget for moving only with mouse
 let isDragging = false;
 let offsetX, offsetY;
 
 whatsapp.addEventListener('mousedown', startDrag);
 document.addEventListener('mousemove', drag);
 document.addEventListener('mouseup', endDrag);
-whatsapp.addEventListener('touchstart', startDrag);
-whatsapp.addEventListener('touchmove', drag);
 
 function startDrag(e) {
   isDragging = true;
-  offsetX = e.clientX || e.touches[0].clientX - e.target.getBoundingClientRect().left;
-  offsetY = e.clientY || e.touches[0].clientY - e.target.getBoundingClientRect().top;
+  offsetX = e.clientX - e.target.getBoundingClientRect().left;
+  offsetY = e.clientY - e.target.getBoundingClientRect().top;
 }
 
 function drag(e) {
@@ -175,26 +173,8 @@ function drag(e) {
   const toggle = whatsapp;
   toggle.style.left = (e.clientX - offsetX) + 'px';
   toggle.style.top = (e.clientY - offsetY) + 'px';
-  const x = e.clientX || e.touches[0].clientX;
-  const y = e.clientY || e.touches[0].clientY;
-
-  const content = whatsappBox;
-  content.style.left = toggle.style.left;
-  content.style.top = toggle.style.top;
 }
 
 function endDrag() {
   isDragging = false;
 }
-
-whatsapp.addEventListener('click', toggleContent);
-
-function toggleContent() {
-  const content = whatsappBox;
-  if (content.style.display === 'none') {
-    content.style.display = 'block';
-  } else {
-    content.style.display = 'none';
-  }
-}
-
