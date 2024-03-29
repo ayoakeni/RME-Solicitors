@@ -3,9 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 body{
   background: #F2F4F3;
   overflow-x: hidden;
