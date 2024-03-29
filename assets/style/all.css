@@ -69,20 +69,17 @@ body{
 
 @keyframes run {
   0%, 100% {
-      transform: scale();
-      /* background-color: #007bff; */
+    transform: scale();
   }
   25% {
-      transform: scale();
-      background-color: #C6AE78;
+    transform: scale();
+    background-color: #C6AE78;
   }
   50% {
-      transform: scale(1.5);
-      /* background-color: #ffc107; */
+    transform: scale(1.5);
   }
   75% {
-      transform: scale(1.2);
-      /* background-color: #dc3545; */
+    transform: scale(1.2);
   }
 }
 .content {
@@ -94,7 +91,6 @@ nav{
   top: 0;
   background: #4169E1;
   width: 100%;
-  /* line-height: 80px; */
   z-index: 3;
   padding: 0px 8%;
 }
@@ -556,7 +552,6 @@ li:hover > ul{
   cursor: pointer;
 }
 .q-box .q-content {
-  /* display: block; */
   color: #444D4B;
   font-size: 16px;
   font-family: "Source Sans 3", sans-serif;
@@ -569,8 +564,7 @@ li:hover > ul{
   overflow: hidden;
 }
 .q-box .q-content.show {
-  /* display: block; */
-  max-height: 200px; /* Set this to a value that accommodates your actual content */
+  max-height: 200px;
 }
 
 .pop-back{
@@ -1194,9 +1188,9 @@ footer{
     overflow-y: scroll;
   }
 }
+
 /* mobile */
 
-/* Nav bar */
 @media (max-width: 954px){
   nav{
     padding: 0;
@@ -1218,14 +1212,15 @@ footer{
   }
   nav ul{
     position: fixed;
-    width: 100%;
+    width: 70%;
     height: 100vh;
     background: #2c3e50;
     top: 80px;
     text-align: center;
-    left: -100%;
+    right: -100%;
     transition: all .5s;
     overflow: scroll;
+    margin: 0;
   }
   nav ul li{
     display: block;
@@ -1241,7 +1236,7 @@ footer{
     color: #0082e6;
   }
   #check:checked ~ ul{
-    left: 0;
+    right: 0;
   }
   .drop-service .drop-down{
     position: relative;
@@ -1279,11 +1274,7 @@ footer{
     background-color: transparent;
     color: #C6AE78;
   }
-}
-/* Ending of Nav bar */
-
-/* Slides */
-@media (max-width: 940px){
+  
   .hero-options{
     gap: 48px;
   }
@@ -1292,6 +1283,7 @@ footer{
     gap: 11px;
     padding: 11px 22px;
   }
+  /* Slides */
   .news-text-box{
     max-width: 100%;
     background-color: #FFFFFF;
@@ -1307,7 +1299,6 @@ footer{
     padding: 4px 8px;
   }
 }
-/* Ending of slides */
 
 @media screen and (max-width: 908px) {
   .hero{
