@@ -106,6 +106,7 @@ let hasTyped = false;
 
 whatsapp.addEventListener("click", () => {
   whatsappBox.classList.toggle("active");
+  toggleContent()
 
   if (whatsappBox.classList.contains("active") && !hasTyped) {
     typeText(initialText);
@@ -150,5 +151,46 @@ function updateTime() {
   let hours = now.getHours().toString().padStart(2, "0");
   let minutes = now.getMinutes().toString().padStart(2, "0");
   document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
+}
+
+let isDragging = false;
+let offsetX, offsetY;
+
+whatsapp.addEventListener('mousedown', startDrag);
+document.addEventListener('mousemove', drag);
+document.addEventListener('mouseup', endDrag);
+
+function startDrag(e) {
+  isDragging = true;
+  offsetX = e.clientX - e.target.getBoundingClientRect().left;
+  offsetY = e.clientY - e.target.getBoundingClientRect().top;
+}
+
+function drag(e) {
+  if (!isDragging) return;
+  e.preventDefault();
+  
+  const toggle = whatsapp;
+  toggle.style.left = (e.clientX - offsetX) + 'px';
+  toggle.style.top = (e.clientY - offsetY) + 'px';
+
+  const content = whatsappBox;
+  content.style.left = toggle.style.left;
+  content.style.top = toggle.style.top;
+}
+
+function endDrag() {
+  isDragging = false;
+}
+
+whatsapp.addEventListener('click', toggleContent);
+
+function toggleContent() {
+  const content = whatsappBox;
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+  } else {
+    content.style.display = 'none';
+  }
 }
 
