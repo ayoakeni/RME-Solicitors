@@ -86,6 +86,10 @@ body{
   opacity: 0;
   transition: opacity 0.5s;
 }
+.menu-checkbox,
+.menu-bar{
+  display: none;
+}
 nav{
   position: fixed;
   top: 0;
@@ -1169,7 +1173,7 @@ footer{
   .about-info{
     width: 50%;
     height: 934.5px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -1203,7 +1207,7 @@ footer{
     text-align: center;
     right: -100%;
     transition: all .5s;
-    overflow: scroll;
+    overflow: auto;
     margin: 0;
   }
   nav ul li{
@@ -1214,7 +1218,8 @@ footer{
   nav ul li a, .dp-service{
     font-size: 20px;
   }
-  nav a.active, nav li a:hover, 
+  nav a.active, nav li a:hover,
+  .dp-service .active,
   .drop-service:hover > .dp-service{
     background: none;
     color: #0082e6;
@@ -1282,6 +1287,7 @@ footer{
     font-size: 20px;
     justify-content: center;
   }
+  .drop-down .drop-active,
   .drop-down li a:hover{
     background-color: transparent;
     color: #C6AE78;
@@ -1467,7 +1473,6 @@ footer{
   }
   .about-info{
     width: 100%;
-    overflow-y: visible;
     height: auto;
   }
   .about-list-txt-img{
