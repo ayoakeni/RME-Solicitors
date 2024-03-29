@@ -972,7 +972,7 @@ footer{
   opacity: 0;
   transform: scaleY(0.1);
   transition: transform 0.3s ease, opacity 0.3s ease, height 0s ease 0.3s;
-  z-index: 1;
+  z-index: 4;
   height: 0;
 }
 .whatsapp-box.active {
@@ -1161,7 +1161,7 @@ footer{
   background: #095e54;
   margin: 0px 20px 20px 0px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 4;
 }
 .whatsapp-toggle .fa-whatsapp{
   font-size: 32px;
@@ -1212,7 +1212,7 @@ footer{
   }
   nav ul{
     position: fixed;
-    width: 70%;
+    width: 50%;
     height: 100vh;
     background: #2c3e50;
     top: 80px;
