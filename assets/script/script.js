@@ -94,87 +94,131 @@ qClick.forEach((click, index) => {
 });
 
 
-// Whatsapp Chat-box
-const whatsapp = document.getElementById("whatsapp-btn");
-const whatsappBox = document.querySelector(".whatsapp-box");
-const cancel = document.querySelector(".whatsapp-close");
-const messageBox = document.querySelector(".whatsapp-box-message");
-const timeElement = document.querySelector(".whatsapp-time");
-const textElement = document.getElementById("text");
-let initialText = "Typically replies within an hour";
-let hasTyped = false;
+// // Whatsapp Chat-box
+// const whatsapp = document.getElementById("whatsapp-btn");
+// const whatsappBox = document.querySelector(".whatsapp-box");
+// const cancel = document.querySelector(".whatsapp-close");
+// const messageBox = document.querySelector(".whatsapp-box-message");
+// const timeElement = document.querySelector(".whatsapp-time");
+// const textElement = document.getElementById("text");
+// let initialText = "Typically replies within an hour";
+// let hasTyped = false;
 
-whatsapp.addEventListener("click", () => {
-  whatsappBox.classList.toggle("active");
+// whatsapp.addEventListener("click", () => {
+//   whatsappBox.classList.toggle("active");
 
-  if (whatsappBox.classList.contains("active") && !hasTyped) {
-    typeText(initialText);
-    hasTyped = true;
+//   if (whatsappBox.classList.contains("active") && !hasTyped) {
+//     typeText(initialText);
+//     hasTyped = true;
 
-    // Show the message box with the loading state
-    messageBox.innerHTML = `<div class="whatsapp-loading-animation">
-     <div class="whatsapp-loading-circle"></div>
-     <div class="whatsapp-loading-circle"></div>
-     <div class="whatsapp-loading-circle"></div>
-    </div>`;
+//     // Show the message box with the loading state
+//     messageBox.innerHTML = `<div class="whatsapp-loading-animation">
+//      <div class="whatsapp-loading-circle"></div>
+//      <div class="whatsapp-loading-circle"></div>
+//      <div class="whatsapp-loading-circle"></div>
+//     </div>`;
 
-    // Simulate a delay before showing the actual message
-    setTimeout(() => {
-      messageBox.innerHTML = `<span class="whatsapp-message-title">Rme Solicitors</span>
-      <span class="whatsapp-content-message">Hi there 👋<br><br> How can i help you?</span>
-      <span class="whatsapp-time">00:00</span>`;
-      updateTime();
-    }, 2500);
-  }
-});
+//     // Simulate a delay before showing the actual message
+//     setTimeout(() => {
+//       messageBox.innerHTML = `<span class="whatsapp-message-title">Rme Solicitors</span>
+//       <span class="whatsapp-content-message">Hi there 👋<br><br> How can i help you?</span>
+//       <span class="whatsapp-time">00:00</span>`;
+//       updateTime();
+//     }, 2500);
+//   }
+// });
 
-cancel.addEventListener("click", () => {
-  whatsappBox.classList.remove("active");
-});
+// cancel.addEventListener("click", () => {
+//   whatsappBox.classList.remove("active");
+// });
 
-function typeText(text) {
-  let index = 0;
-  function typeNextCharacter() {
-    if (index < text.length) {
-      textElement.textContent += text[index];
-      index++;
-      setTimeout(typeNextCharacter, 50); // Adjust the speed here (milliseconds)
-    }
-  }
-  typeNextCharacter();
-}
+// function typeText(text) {
+//   let index = 0;
+//   function typeNextCharacter() {
+//     if (index < text.length) {
+//       textElement.textContent += text[index];
+//       index++;
+//       setTimeout(typeNextCharacter, 50); // Adjust the speed here (milliseconds)
+//     }
+//   }
+//   typeNextCharacter();
+// }
 
-function updateTime() {
-  // Update the time to the current time
-  let now = new Date();
-  let hours = now.getHours().toString().padStart(2, "0");
-  let minutes = now.getMinutes().toString().padStart(2, "0");
-  document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
-}
+// function updateTime() {
+//   // Update the time to the current time
+//   let now = new Date();
+//   let hours = now.getHours().toString().padStart(2, "0");
+//   let minutes = now.getMinutes().toString().padStart(2, "0");
+//   document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
+// }
 
-// Whatsapp icon chat widget for moving only with mouse
+// // Whatsapp icon chat widget for moving only with mouse
+// let isDragging = false;
+// let offsetX, offsetY;
+
+// whatsapp.addEventListener('mousedown', startDrag);
+// document.addEventListener('mousemove', drag);
+// document.addEventListener('mouseup', endDrag);
+
+// function startDrag(e) {
+//   isDragging = true;
+//   offsetX = e.clientX - e.target.getBoundingClientRect().left;
+//   offsetY = e.clientY - e.target.getBoundingClientRect().top;
+// }
+
+// function drag(e) {
+//   if (!isDragging) return;
+//   e.preventDefault();
+  
+//   const toggle = whatsapp;
+//   toggle.style.left = (e.clientX - offsetX) + 'px';
+//   toggle.style.top = (e.clientY - offsetY) + 'px';
+// }
+
+// function endDrag() {
+//   isDragging = false;
+// }
 let isDragging = false;
 let offsetX, offsetY;
 
-whatsapp.addEventListener('mousedown', startDrag);
+const toggle = document.getElementById('whatsapp-toggle');
+toggle.addEventListener('mousedown', startDrag);
+toggle.addEventListener('touchstart', startDrag);
+
 document.addEventListener('mousemove', drag);
+document.addEventListener('touchmove', drag);
+
 document.addEventListener('mouseup', endDrag);
+document.addEventListener('touchend', endDrag);
 
 function startDrag(e) {
-  isDragging = true;
-  offsetX = e.clientX - e.target.getBoundingClientRect().left;
-  offsetY = e.clientY - e.target.getBoundingClientRect().top;
+    isDragging = true;
+    offsetX = e.clientX || e.touches[0].clientX - toggle.getBoundingClientRect().left;
+    offsetY = e.clientY || e.touches[0].clientY - toggle.getBoundingClientRect().top;
 }
 
 function drag(e) {
-  if (!isDragging) return;
-  e.preventDefault();
-  
-  const toggle = whatsapp;
-  toggle.style.left = (e.clientX - offsetX) + 'px';
-  toggle.style.top = (e.clientY - offsetY) + 'px';
+    if (!isDragging) return;
+    e.preventDefault();
+    
+    const x = e.clientX || e.touches[0].clientX;
+    const y = e.clientY || e.touches[0].clientY;
+
+    toggle.style.left = (x - offsetX) + 'px';
+    toggle.style.top = (y - offsetY) + 'px';
+
+    const content = document.getElementById('whatsapp-content');
+    content.style.left = toggle.style.left;
+    content.style.top = toggle.style.top;
 }
 
 function endDrag() {
-  isDragging = false;
+    isDragging = false;
+}
+
+toggle.addEventListener('click', toggleContent);
+
+function toggleContent() {
+    const content = document.getElementById('whatsapp-content');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
 }
