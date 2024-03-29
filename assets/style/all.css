@@ -1153,7 +1153,7 @@ footer{
   font-weight: 600;
   margin: 0px 8px;
 }
-.whatsapp-button-icon{
+.whatsapp-toggle{
   position: fixed;
   right: 0;
   bottom: 0;
@@ -1169,7 +1169,7 @@ footer{
   cursor: pointer;
   z-index: 1;
 }
-.whatsapp-button-icon .fa-whatsapp{
+.whatsapp-toggle .fa-whatsapp{
   font-size: 32px;
   color: #fff;
 }
