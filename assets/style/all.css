@@ -127,6 +127,7 @@ nav ul li a, .dp-service{
   cursor: pointer;
 }
 nav a.active,
+.drop-service .active,
 nav ul a:hover{
   background: #fff;
   color: #000;
@@ -182,6 +183,7 @@ li:hover > ul{
   padding: 0px 24px;
   border-radius: 0;
 }
+.drop-down .drop-active,
 .drop-down li a:hover{
   background-color: #C6AE78;
   color: #fff;
@@ -1219,7 +1221,7 @@ footer{
     font-size: 20px;
   }
   nav a.active, nav li a:hover,
-  .dp-service .active,
+  .drop-service .active,
   .drop-service:hover > .dp-service{
     background: none;
     color: #0082e6;
