@@ -769,7 +769,8 @@ footer{
   font-style: normal;
   text-decoration: none;
 }
-.foot-text2-opt a{
+.foot-text2-opt a,
+.foot-text2-opt span{
   display: block;
   color: #FFFFFF;
   font-size: 14px;
