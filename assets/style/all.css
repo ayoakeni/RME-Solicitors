@@ -812,7 +812,7 @@ footer{
 .hero-page{
   display: flex;
   height: 490px;
-  background-image: url(../images/judge-image.png);
+  background-image: linear-gradient(rgba(0,0,255,50%), rgba(0,0,255,50%) ), url(../images/judge-image.png);
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 80px;
@@ -1260,7 +1260,6 @@ footer{
     text-align: center;
     right: -100%;bottom: 0;
     transition: all .5s;
-    border-top-left-radius: 20px;
     margin: 0;
   }
   nav ul li{
@@ -1521,14 +1520,6 @@ footer{
     width: 90%;
   }
   }
-  @media(max-height: 700px){
-    nav ul{
-      overflow: auto;
-    }
-    nav ul :nth-child(5){
-      margin-bottom: 140px;
-    }
-  }
   @media (max-width: 684px){
     .layer-info .bgtext p{
       font-size: 18px;
@@ -1695,6 +1686,12 @@ footer{
   @media (max-width: 320px){
     nav ul{
       width: 60%;
+    }
+    nav ul{
+      overflow: auto;
+    }
+    nav ul :nth-child(5){
+      margin-bottom: 140px;
     }
     .book-consult button{
       width: fit-content;
