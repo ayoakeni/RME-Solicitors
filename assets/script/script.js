@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 40,
   loop: true, // Enable infinite loop
   autoplay: {
     delay: 3000,
@@ -57,9 +55,17 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 20,
     },
+    941: {
+      slidesPerView: 1.4,
+      spaceBetween: 30,
+    },
     1024: {
       slidesPerView: 1.6,
       spaceBetween: 30,
+    },
+    1349: {
+      slidesPerView: 2.4,
+      spaceBetween: 130,
     },
     1440: {
       slidesPerView: 2.1,
