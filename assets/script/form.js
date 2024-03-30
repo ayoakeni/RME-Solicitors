@@ -1,12 +1,11 @@
 // Popup message for sucessfull submit
-const Popup = document.getElementById("popup");
 const closePopup = document.getElementById("close-btn");
 
 function openPopup(){
-  Popup.classList.add("openPopup");
+  pop.classList.add("openPopup");
 }
 closePopup.addEventListener("click", () => {
-  Popup.classList.remove("openPopup");
+  pop.classList.remove("openPopup");
 });
 
 
@@ -40,12 +39,26 @@ const bodyMessage = `Full Name: ${name.value}<br> Email: ${email.value}
       else{
         Swal.fire({
           title: "Oops!",
-          text: "Unable to send emails. Please try again later.",
+          text: "Unable to send emails. Please try again.",
           icon: "error"
-        })
+        })       
       }
     }
-  );
+  ).catch(_error => {
+    Swal.fire({
+      title: "Oops!",
+      text: "Unable to send. Please check your internet connection or try again later.",
+      icon: "error"
+    }) 
+  });
+    if (!navigator.onLine) {
+      Swal.fire({
+        title: "Oops!",
+        text: "Failed to send. No_internet Connection.",
+        icon: "error"
+      }) 
+    return;
+  }
 }
 // For errors or wrong inputs
 function checkInputs() {

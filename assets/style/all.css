@@ -1668,6 +1668,9 @@ footer{
     .book-consult h4 br{
       display: none;
     }
+    .popup{
+      width: 290px;
+    }
     /* Whatsapp Chat-box */
     .whatsapp-box {
       width: 320px;
@@ -1682,6 +1685,9 @@ footer{
     }
     .book-consult button a{
       padding: 10px 20px;
+    }
+    .popup{
+      width: 280px;
     }
     /* Whatsapp Chat-box */
     .whatsapp-box {
