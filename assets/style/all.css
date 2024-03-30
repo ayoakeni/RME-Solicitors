@@ -1400,7 +1400,8 @@ footer{
     gap: 20px;
   }
   .hero-opt{
-    width: 80%;
+    width: 90%;
+    padding: 0px 40px;
   }
   .hero-opt a{
     font-size: 18px;
