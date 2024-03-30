@@ -769,9 +769,11 @@ footer{
   font-style: normal;
   text-decoration: none;
 }
-.foot-text2-opt span{
+.foot-text2-opt a{
   display: block;
+  color: #FFFFFF;
   font-size: 14px;
+  text-decoration: none;
 }
 .socials-handle{
   display: flex;
@@ -1519,6 +1521,14 @@ footer{
     width: 90%;
   }
   }
+  @media(max-height: 700px){
+    nav ul{
+      overflow: auto;
+    }
+    nav ul :nth-child(5){
+      margin-bottom: 140px;
+    }
+  }
   @media (max-width: 684px){
     .layer-info .bgtext p{
       font-size: 18px;
@@ -1701,13 +1711,5 @@ footer{
     }
     .whatsapp-send-field{
       width: 240px;
-    }
-  }
-  @media(max-height: 700px){
-    nav ul{
-      overflow: auto;
-    }
-    nav ul :nth-child(5){
-      margin-bottom: 140px;
     }
   }
