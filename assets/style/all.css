@@ -560,7 +560,9 @@ li:hover > ul{
 .q-box .q-content.show {
   max-height: 200px;
 }
-
+.enquiry-footer{
+  background-color: #D7DCEE;
+}
 .pop-back{
   position: fixed;
   top: 0;
@@ -627,9 +629,6 @@ li:hover > ul{
   border-radius: 4px;
   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
   cursor: pointer;
-}
-.enquiry-footer{
-  background-color: #D7DCEE;
 }
 .make-enquiry{
   color: #15347D;
