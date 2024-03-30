@@ -36,15 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 40,
-  cssMode: true,
-  autoplay:{delay: 3000},
-  // slidesPerView: 1,
-  // spaceBetween: 10,
+  loop: true, // Enable infinite loop
+  autoplay: {
+    delay: 3000,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -52,36 +51,23 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-  800: {
-      slidesPerView: 1,
       spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 2,
-      spaceBetween: 50,
+      slidesPerView: 1.6,
+      spaceBetween: 30,
     },
-    1045: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+    1440: {
+      slidesPerView: 2.1,
+      spaceBetween: 30,
     },
-    1115: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-    },
-    1366: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    }
   },
-  mousewheel: true,
-  keyboard: true,
 });
+
 
 // Question-answer
 const qClick = document.querySelectorAll(".question-click");
