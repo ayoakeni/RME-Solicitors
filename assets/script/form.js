@@ -112,6 +112,16 @@ function checkEmail() {
     email.parentElement.classList.remove("error");
   }
 }
+// For Phone number
+phone.addEventListener('keydown', function(event) {
+  // Allow backspace, delete, arrow keys, and numbers
+  if (event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || (event.key >= '0' && event.key <= '9')) {
+    return true;
+  } else {
+    event.preventDefault();
+    return false;
+  }
+});
 // Submit button
 form.addEventListener("submit", (e) => {
   e.preventDefault();
