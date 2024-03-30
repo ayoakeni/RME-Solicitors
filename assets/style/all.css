@@ -1229,6 +1229,9 @@ footer{
   .testimonial .immg img{
     width: 100%;
   }
+  footer{
+    padding: 50px;
+  }
  }
 /* mobile */
 
@@ -1467,9 +1470,6 @@ footer{
   .contact-box{
     flex-direction: column;
     gap: 24px;
-  }
-  footer{
-    padding: 50px;
   }
   .foot-text{
     flex-wrap: wrap;
