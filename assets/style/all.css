@@ -1454,7 +1454,7 @@ footer{
   }
   .book-consult{
     width: 80%;
-    padding: 40px 20px;
+    padding: 40px;
   }
   .book-consult h4{
     font-size: 30px;
@@ -1526,6 +1526,9 @@ footer{
     }
     .welcoming-info{
       margin: 0px auto 40px;
+    }
+    .book-consult{
+      padding: 30px;
     }
   }
   @media  (max-width: 545px) {
@@ -1611,14 +1614,10 @@ footer{
       padding: 20px;
     }
     .book-consult{
-      text-align: center;
-      padding: 40px 10px;
+      padding: 30px;
     }
     .book-consult h4{
-      font-size: 20px;
-    }
-    .book-consult h4 br{
-      display: none;
+      font-size: 25px;
     }
     .make-enquiry{
       width: 100%;
@@ -1657,21 +1656,38 @@ footer{
       width: 90%;
     }
   }
-@media (max-width: 360px) {
-  /* Whatsapp Chat-box */
-  .whatsapp-box {
-    width: 320px;
+  @media (max-width:453px){
+    .book-consult{
+      padding: 25px;
+    }
+    .book-consult h4{
+      font-size: 20px;
+    }
   }
-  .whatsapp-send-field{
-    width: 280px;
+  @media (max-width: 361px) {
+    .book-consult h4 br{
+      display: none;
+    }
+    /* Whatsapp Chat-box */
+    .whatsapp-box {
+      width: 320px;
+    }
+    .whatsapp-send-field{
+      width: 280px;
+    }
   }
-}
-@media (max-width: 320px) {
-  /* Whatsapp Chat-box */
-  .whatsapp-box {
-    width: 280px;
+  @media (max-width: 320px) {
+    .book-consult button{
+      width: fit-content;
+    }
+    .book-consult button a{
+      padding: 10px 20px;
+    }
+    /* Whatsapp Chat-box */
+    .whatsapp-box {
+      width: 280px;
+    }
+    .whatsapp-send-field{
+      width: 240px;
+    }
   }
-  .whatsapp-send-field{
-    width: 240px;
-  }
-}
