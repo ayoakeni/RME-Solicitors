@@ -1252,13 +1252,13 @@ footer{
   nav ul{
     position: fixed;
     width: 52%;
-    height: 100vh;
     background: #2c3e50;
     top: 80px;
     text-align: center;
     right: -100%;
+    bottom: 0;
     transition: all .5s;
-    overflow: auto;
+    border-top-left-radius: 20px ;
     margin: 0;
   }
   nav ul li{
@@ -1665,6 +1665,9 @@ footer{
     }
   }
   @media (max-width: 361px) {
+    nav ul{
+      width: 55%;
+    }
     .book-consult h4 br{
       display: none;
     }
@@ -1679,7 +1682,10 @@ footer{
       width: 280px;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 320px){
+    nav ul{
+      width: 60%;
+    }
     .book-consult button{
       width: fit-content;
     }
@@ -1695,5 +1701,13 @@ footer{
     }
     .whatsapp-send-field{
       width: 240px;
+    }
+  }
+  @media(max-height: 700px){
+    nav ul{
+      overflow: auto;
+    }
+    nav ul :nth-child(5){
+      margin-bottom: 140px;
     }
   }
