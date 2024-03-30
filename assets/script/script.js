@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Swiper slide
 var swiper = new Swiper(".mySwiper", {
-  loop: true, // Enable infinite loop
+  loop: true,
   autoplay: {
     delay: 3000,
   },
