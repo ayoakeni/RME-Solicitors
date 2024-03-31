@@ -1,17 +1,37 @@
-// Hide the loading screen after 3 seconds
-let loadingTimeout = setTimeout(function() {
-  let loadIndex = document.querySelector('.loading-screen');
-  loadIndex.style.opacity = '0';
-  loadIndex.style.zIndex = '-1';
-  // Show the content
-  document.querySelector('.content').style.opacity = '1';
-}, 3000); // 3 seconds delay
+window.addEventListener('load', function() {
+  // Hide the loading screen after the images are halfway loaded
+  let images = document.querySelectorAll('img');
+  let loadedCount = 0;
+  let halfwayCount = Math.ceil(images.length / 2);
+
+  images.forEach(function(image) {
+    image.addEventListener('load', function() {
+      loadedCount++;
+      if (loadedCount >= halfwayCount) {
+        // If at least half of the images are loaded, hide the loading screen
+        let loadIndex = document.querySelector('.loading-screen');
+        loadIndex.style.opacity = '0';
+        loadIndex.style.zIndex = '-1';
+        // Show the content
+        document.querySelector('.content').style.opacity = '1';
+      }
+    });
+  });
+
+  // Fallback: Hide the loading screen after 3 seconds
+  setTimeout(function() {
+    let loadIndex = document.querySelector('.loading-screen');
+    loadIndex.style.opacity = '0';
+    loadIndex.style.zIndex = '-1';
+    // Show the content
+    document.querySelector('.content').style.opacity = '1';
+  }, 3000); // 3 seconds delay
+});
 
 // Check if the content has been loaded
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
-    // Cancel the timeout if the content is fully loaded before the 3-second delay
-    clearTimeout(loadingTimeout);
+    // If the content is fully loaded before the 3-second delay, hide the loading screen immediately
     let loadIndex = document.querySelector('.loading-screen');
     loadIndex.style.opacity = '0';
     loadIndex.style.zIndex = '-1';
@@ -19,7 +39,6 @@ document.onreadystatechange = function() {
     document.querySelector('.content').style.opacity = '1';
   }
 };
-
 
 
 // Smooth scroll to anchor links
