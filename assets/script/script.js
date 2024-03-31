@@ -1,5 +1,5 @@
 // Hide the loading screen after 3 seconds
-setTimeout(function() {
+let loadingTimeout = setTimeout(function() {
   let loadIndex = document.querySelector('.loading-screen');
   loadIndex.style.opacity = '0';
   loadIndex.style.zIndex = '-1';
@@ -10,7 +10,8 @@ setTimeout(function() {
 // Check if the content has been loaded
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
-    // If the content is fully loaded before the 3-second delay, hide the loading screen immediately
+    // Cancel the timeout if the content is fully loaded before the 3-second delay
+    clearTimeout(loadingTimeout);
     let loadIndex = document.querySelector('.loading-screen');
     loadIndex.style.opacity = '0';
     loadIndex.style.zIndex = '-1';
@@ -18,6 +19,7 @@ document.onreadystatechange = function() {
     document.querySelector('.content').style.opacity = '1';
   }
 };
+
 
 
 // Smooth scroll to anchor links
