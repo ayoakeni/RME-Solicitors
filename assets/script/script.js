@@ -1,14 +1,24 @@
-// Loading Screen
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    // Hide the loading screen and  Remove the loading-screen index when content has finished loading
+// Hide the loading screen after 3 seconds
+setTimeout(function() {
+  let loadIndex = document.querySelector('.loading-screen');
+  loadIndex.style.opacity = '0';
+  loadIndex.style.zIndex = '-1';
+  // Show the content
+  document.querySelector('.content').style.opacity = '1';
+}, 3000); // 3 seconds delay
+
+// Check if the content has been loaded
+document.onreadystatechange = function() {
+  if (document.readyState === 'complete') {
+    // If the content is fully loaded before the 3-second delay, hide the loading screen immediately
     let loadIndex = document.querySelector('.loading-screen');
     loadIndex.style.opacity = '0';
     loadIndex.style.zIndex = '-1';
     // Show the content
     document.querySelector('.content').style.opacity = '1';
-  }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
-});
+  }
+};
+
 
 // Smooth scroll to anchor links
 document.addEventListener('DOMContentLoaded', function() {
