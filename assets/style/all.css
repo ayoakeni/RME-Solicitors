@@ -1718,7 +1718,7 @@ footer{
       width: 280px;
     }
   }
-  @media (max-width: 320px){
+  @media (max-width: 320px), (max-height: 568px){
     nav ul{
       width: 60%;
     }
