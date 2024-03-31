@@ -1197,26 +1197,11 @@ footer{
   }
 }
  @media (max-width: 1021px){
-  .hero{
-    flex-wrap: wrap;
-    background-image: none;
-  }
-  .hero-img{
-    display: block;
-    width: 100%;  
-  }
   .hero-img img{
     width: 100%;
   }
   .layer-info{
     width: 100%;
-  }
-  .bgtext{
-    width: 100%;
-  }
-  h1 br{
-    display: none;
-    width: 80%;
   }
   .testimonial{
     flex-direction: column;
@@ -1232,6 +1217,19 @@ footer{
   }
   footer{
     padding: 50px;
+  }
+ }
+ @media (max-width: 1000px){
+  .hero{
+    flex-wrap: wrap;
+    background-image: none;
+  }
+  .hero-img{
+    display: block;
+    width: 100%;  
+  }
+  .bgtext{
+    width: 100%;
   }
  }
 /* mobile */
@@ -1384,7 +1382,6 @@ footer{
     margin-bottom: 40px;
   }
   .layer-info .bgtext h1{
-    font-size: 40px;
     margin-bottom: 12px;
   }
   .layer-info .bgtext h1 span{
@@ -1522,6 +1519,10 @@ footer{
   }
   }
   @media (max-width: 767px) {
+    .layer-info .bgtext p{
+      font-size: 18px;
+      width: 80%;
+    }
     .news-text{
       width: 100%;
       margin: 0 0 30px;
@@ -1554,7 +1555,7 @@ footer{
       margin-bottom: 20px;
     }
     .layer-info .bgtext h1{
-      font-size: 34px;
+      font-size: 50px;
     }
     .layer-info .bgtext h1 span{
       font-size: 34px;
@@ -1671,6 +1672,21 @@ footer{
     }
   }
   @media (max-width:453px){
+    nav .logo{
+      margin-left: 15px;
+    } 
+    .menu-bar{
+      margin-right: 20px;
+    }
+    .menu-icon, .close-icon {
+      font-size: 25px;
+    }
+    .layer-info .bgtext h1{
+      font-size: 40px;
+    }
+    .layer-info .bgtext h1 span{
+      font-size: 30px;
+    }
     .book-consult{
       padding: 25px;
     }
@@ -1681,6 +1697,12 @@ footer{
   @media (max-width: 361px) {
     nav ul{
       width: 55%;
+    }
+    .layer-info .bgtext h1{
+      font-size: 37px;
+    }
+    .layer-info .bgtext h1 span{
+      font-size: 27px;
     }
     .book-consult h4 br{
       display: none;
@@ -1705,6 +1727,12 @@ footer{
     }
     nav ul :nth-child(5){
       margin-bottom: 140px;
+    }
+    .layer-info .bgtext h1{
+      font-size: 33px;
+    }
+    .layer-info .bgtext h1 span{
+      font-size: 23px;
     }
     .book-consult button{
       width: fit-content;
