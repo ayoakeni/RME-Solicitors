@@ -40,7 +40,6 @@ document.onreadystatechange = function() {
   }
 };
 
-
 // Smooth scroll to anchor links
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the URL contains an ID parameter
@@ -65,6 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollToElement(targetId); // Scroll to the target element
     });
   });
+});
+
+// Nav bar for mobile when clicked outside the menu-bar "close the menu bar"
+var menuToggle = document.getElementById("menu-toggle");
+var menu = document.querySelector(".menu-bar");
+var content = document.querySelector("nav ul");
+
+document.addEventListener("click", function(event) {
+  var target = event.target;
+  var isClickInsideMenu = menu.contains(target);
+  var isClickInsideContent = content.contains(target);
+
+  if (!isClickInsideMenu && !isClickInsideContent && target !== menuToggle && target !== menuToggle.nextElementSibling) {
+    menuToggle.checked = false;
+  }
 });
 
 // Swiper slide
