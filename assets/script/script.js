@@ -119,7 +119,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 // Question-answer
 const qClick = document.querySelectorAll(".question-click");
 const qCont = document.querySelectorAll(".q-content");
@@ -129,7 +128,6 @@ qClick.forEach((click, index) => {
     qCont[index].classList.toggle("show");
   });
 });
-
 
 // Whatsapp Chat-box
 const whatsapp = document.getElementById("whatsapp-btn");

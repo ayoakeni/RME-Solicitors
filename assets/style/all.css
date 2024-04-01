@@ -750,6 +750,7 @@ footer{
 }
 .foot-text1{
   display: flex;
+  align-items: end;
   flex-direction: column;
   gap: 14px;
   height: fit-content;
@@ -773,9 +774,12 @@ footer{
   font-weight: 200;
   font-style: normal;
   width: fit-content;
-  text-decoration: none;
+  text-decoration: none;  
+  transition: all .5s;
 }
-.foot-text1-opt a:hover{
+.foot-text1-opt a:hover,
+.foot-text2-opt a:hover,
+.socials-handle a:hover{
   color: #9D8341;
 }
 .foot-text2{
@@ -798,6 +802,7 @@ footer{
   color: #FFFFFF;
   font-size: 14px;
   text-decoration: none;
+  transition: all .5s;
 }
 .socials-handle{
   display: flex;
@@ -809,6 +814,7 @@ footer{
   color: #fff;
   height: 24px;
   width: 24px;
+  transition: all .5s;
 }
 .copy-right{
   padding-top: 28px;
