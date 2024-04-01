@@ -1765,7 +1765,7 @@ footer{
       background: #2c3e50;
     }
     nav ul::-webkit-scrollbar-button {
-      height: 20px;
+      height: 10px;
     }
     nav ul::-webkit-scrollbar-button:hover {
       background-color: transparent;
