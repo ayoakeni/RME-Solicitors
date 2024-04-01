@@ -1758,6 +1758,7 @@ footer{
       width: 5px;
     }
     nav ul::-webkit-scrollbar-thumb {
+      border-radius: 5px;
       background-color:  #0082e6;
     }
     nav ul::-webkit-scrollbar-track {
