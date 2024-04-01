@@ -7,6 +7,29 @@ body{
   background: #F2F4F3;
   overflow-x: hidden;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4169E1;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-button {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+::-webkit-scrollbar-button:hover {
+  background-color: #e6d5ae;
+}
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="blue" d="M12 20l-8-8h16z"/></svg>');
+}
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="blue" d="M12 4l8 8H4z"/></svg>');
+}
 /* Styles for the loading screen */
 .loading-screen {
   position: fixed;
@@ -1195,6 +1218,12 @@ footer{
     height: 934.5px;
     overflow-y: auto;
   }
+  .about-info::-webkit-scrollbar {
+    width: 5px;
+  }
+  .about-info::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
 }
  @media (max-width: 1021px){
   .hero-img img{
@@ -1398,7 +1427,7 @@ footer{
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto 60px;
+    margin: 40px auto;
     gap: 20px;
   }
   .hero-opt{
@@ -1724,6 +1753,28 @@ footer{
     }
     nav ul{
       overflow: auto;
+    }
+    nav ul::-webkit-scrollbar {
+      width: 5px;
+    }
+    nav ul::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color:  #0082e6;
+    }
+    nav ul::-webkit-scrollbar-track {
+      background: #2c3e50;
+    }
+    nav ul::-webkit-scrollbar-button {
+      height: 10px;
+    }
+    nav ul::-webkit-scrollbar-button:hover {
+      background-color: transparent;
+    }
+    nav ul::-webkit-scrollbar-button:vertical:increment {
+      background-image:none;
+    }
+    nav ul::-webkit-scrollbar-button:vertical:decrement {
+      background-image: none;
     }
     nav ul :nth-child(5){
       margin-bottom: 140px;
