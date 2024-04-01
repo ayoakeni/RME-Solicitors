@@ -1292,6 +1292,32 @@ footer{
     right: -100%;bottom: 0;
     transition: all .5s;
     margin: 0;
+    overflow: auto;
+  }
+  nav ul :nth-child(5){
+    margin-bottom: 140px;
+  }
+  nav ul::-webkit-scrollbar {
+    width: 5px;
+  }
+  nav ul::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color:  #0082e6;
+  }
+  nav ul::-webkit-scrollbar-track {
+    background: #2c3e50;
+  }
+  nav ul::-webkit-scrollbar-button {
+    height: 10px;
+  }
+  nav ul::-webkit-scrollbar-button:hover {
+    background-color: transparent;
+  }
+  nav ul::-webkit-scrollbar-button:vertical:increment {
+    background-image:none;
+  }
+  nav ul::-webkit-scrollbar-button:vertical:decrement {
+    background-image: none;
   }
   nav ul li{
     display: block;
@@ -1747,37 +1773,9 @@ footer{
       width: 280px;
     }
   }
-  @media (max-width: 320px), (max-height: 568px){
+  @media (max-width: 320px){
     nav ul{
       width: 60%;
-    }
-    nav ul{
-      overflow: auto;
-    }
-    nav ul::-webkit-scrollbar {
-      width: 5px;
-    }
-    nav ul::-webkit-scrollbar-thumb {
-      border-radius: 5px;
-      background-color:  #0082e6;
-    }
-    nav ul::-webkit-scrollbar-track {
-      background: #2c3e50;
-    }
-    nav ul::-webkit-scrollbar-button {
-      height: 10px;
-    }
-    nav ul::-webkit-scrollbar-button:hover {
-      background-color: transparent;
-    }
-    nav ul::-webkit-scrollbar-button:vertical:increment {
-      background-image:none;
-    }
-    nav ul::-webkit-scrollbar-button:vertical:decrement {
-      background-image: none;
-    }
-    nav ul :nth-child(5){
-      margin-bottom: 140px;
     }
     .layer-info .bgtext h1{
       font-size: 33px;
