@@ -807,14 +807,20 @@ footer{
 .socials-handle{
   display: flex;
   align-items: end;
-  gap: 8px;
 }
 .socials-handle a{
-  font-size: 24px;
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   color: #fff;
-  height: 24px;
-  width: 24px;
+  text-align: center;
+  text-decoration: none;
   transition: all .5s;
+}
+.socials-handle a .fa-instagram{
+  font-size: 24px;
+  margin-right: 5px;
 }
 .copy-right{
   padding-top: 28px;
