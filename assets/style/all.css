@@ -1759,6 +1759,9 @@ footer{
     .layer-info .bgtext h1 span{
       font-size: 30px;
     }
+    .text-tes1 i{
+      display: none;
+    }
     .book-consult{
       padding: 25px;
     }
