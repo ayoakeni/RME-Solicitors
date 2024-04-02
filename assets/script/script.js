@@ -130,6 +130,7 @@ const qCont = document.querySelectorAll(".q-content");
 qClick.forEach((click, index) => {
   click.addEventListener("click", () =>{
     qCont[index].classList.toggle("show");
+    click.classList.toggle("rotate");
   });
 });
 
