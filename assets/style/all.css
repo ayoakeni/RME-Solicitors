@@ -572,7 +572,6 @@ li:hover > ul{
 }
 .rotate {
   transform: rotateX(180deg);
-
 }
 .q-box .q-content {
   color: #444D4B;
