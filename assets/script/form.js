@@ -23,10 +23,7 @@ const bodyMessage = `Full Name: ${name.value}<br> Email: ${email.value}
 <br> Surname: ${surname.value}<br> Phone Number: ${phone.value}<br>Message: ${message.value}`;
 
   Email.send({
-    // SecureToken : "a692a79d-6d31-4195-96b6-443d33dc1958",
-    Host : "smtp.elasticemail.com",
-    Username : "akeniayowunmi@gmail.com",
-    Password : "F4751978190A460064BA7FB1B0ADF3401306",
+    SecureToken : "c738c4a7-880e-42d4-be32-3f4a8d75d935",
     To : 'ayoakeni64@gmail.com',
     From : "akeniayowunmi@gmail.com",
     Subject : "Enquiry from Rme Solicitors",
