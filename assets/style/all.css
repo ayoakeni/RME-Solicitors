@@ -568,7 +568,6 @@ li:hover > ul{
   color: #4F4668;
   font-size: 16px;
   height: fit-content;
-  transition: transform 0.3s ease;
 }
 .rotate .question-click {
   transform: rotateX(180deg);
