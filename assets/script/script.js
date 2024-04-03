@@ -221,9 +221,15 @@ function drag(e) {
   
   const x = e.clientX || e.touches[0].clientX;
   const y = e.clientY || e.touches[0].clientY;
+  
+  const maxX = window.innerWidth - whatsapp.offsetWidth;
+  const maxY = window.innerHeight - whatsapp.offsetHeight;
 
-  whatsapp.style.left = (x - offsetX) + 'px';
-  whatsapp.style.top = (y - offsetY) + 'px';
+  const newX = Math.min(maxX, Math.max(0, x));
+  const newY = Math.min(maxY, Math.max(0, y));
+
+  whatsapp.style.left = newX + 'px';
+  whatsapp.style.top = newY + 'px';
 }
 
 function endDrag() {
