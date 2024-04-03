@@ -197,41 +197,41 @@ function updateTime() {
 }
 
 // Whatsapp icon chat widget for moving with mouse and touch
-let isDragging = false;
-let offsetX, offsetY;
+// let isDragging = false;
+// let offsetX, offsetY;
 
-whatsapp.addEventListener('mousedown', startDrag);
-whatsapp.addEventListener('touchstart', startDrag);
+// whatsapp.addEventListener('mousedown', startDrag);
+// whatsapp.addEventListener('touchstart', startDrag);
 
-document.addEventListener('mousemove', drag);
-document.addEventListener('touchmove', drag);
+// document.addEventListener('mousemove', drag);
+// document.addEventListener('touchmove', drag);
 
-document.addEventListener('mouseup', endDrag);
-document.addEventListener('touchend', endDrag);
+// document.addEventListener('mouseup', endDrag);
+// document.addEventListener('touchend', endDrag);
 
-function startDrag(e) {
-  isDragging = true;
-  offsetX = (e.clientX || e.touches[0].clientX) - whatsapp.getBoundingClientRect().left;
-  offsetY = (e.clientY || e.touches[0].clientY) - whatsapp.getBoundingClientRect().top;
-}
+// function startDrag(e) {
+//   isDragging = true;
+//   offsetX = (e.clientX || e.touches[0].clientX) - whatsapp.getBoundingClientRect().left;
+//   offsetY = (e.clientY || e.touches[0].clientY) - whatsapp.getBoundingClientRect().top;
+// }
 
-function drag(e) {
-  if (!isDragging) return;
-  e.preventDefault();
+// function drag(e) {
+//   if (!isDragging) return;
+//   e.preventDefault();
   
-  const x = e.clientX || e.touches[0].clientX;
-  const y = e.clientY || e.touches[0].clientY;
+//   const x = e.clientX || e.touches[0].clientX;
+//   const y = e.clientY || e.touches[0].clientY;
   
-  const maxX = window.innerWidth - whatsapp.offsetWidth;
-  const maxY = window.innerHeight - whatsapp.offsetHeight;
+//   const maxX = window.innerWidth - whatsapp.offsetWidth;
+//   const maxY = window.innerHeight - whatsapp.offsetHeight;
 
-  const newX = Math.min(maxX, Math.max(0, x));
-  const newY = Math.min(maxY, Math.max(0, y));
+//   const newX = Math.min(maxX, Math.max(0, x));
+//   const newY = Math.min(maxY, Math.max(0, y));
 
-  whatsapp.style.left = newX + 'px';
-  whatsapp.style.top = newY + 'px';
-}
+//   whatsapp.style.left = newX + 'px';
+//   whatsapp.style.top = newY + 'px';
+// }
 
-function endDrag() {
-  isDragging = false;
-}
+// function endDrag() {
+//   isDragging = false;
+// }
