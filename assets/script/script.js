@@ -196,7 +196,7 @@ function updateTime() {
   document.querySelector(".whatsapp-time").textContent = `${hours}:${minutes}`;
 }
 
-// Whatsapp icon chat widget for moving only with mouse
+// Whatsapp icon chat widget for moving with mouse and touch
 let isDragging = false;
 let offsetX, offsetY;
 
