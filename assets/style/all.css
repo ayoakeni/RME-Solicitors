@@ -752,11 +752,13 @@ footer{
 .foot-text-immg{
   display: flex;
   align-items: end;
+  width: fit-content;
 }
 .foot-text1{
   display: flex;
   align-items: end;
   flex-direction: column;
+  width: fit-content;
   gap: 14px;
   height: fit-content;
 }
@@ -771,6 +773,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .foot-text1-opt a{
   color: #FFFFFF;
@@ -791,6 +794,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: end;
+  width: 25%;
   gap: 5px;
 }
 .foot-text2-opt{
@@ -812,19 +816,12 @@ footer{
 .socials-handle{
   display: flex;
   align-items: end;
+  width: fit-content;
 }
 .socials-handle a{
-  font-size: 16px;
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  transition: all .5s;
-}
-.socials-handle a .fa-instagram{
   font-size: 24px;
+  color: #fff;
+  transition: all .5s;
   margin-right: 5px;
 }
 .copy-right{
@@ -1602,6 +1599,9 @@ footer{
     .swiper-slide {
       width: auto;
     }
+    .foot-text2{
+      width: fit-content;
+    }
   }
   @media (max-width: 684px){
     .layer-info .bgtext p{
@@ -1665,7 +1665,7 @@ footer{
     }
     .text-mo .testimon{
       display: block;
-      font-size: 38px;
+      font-size: 33px;
       text-align: center;
     }
     .text-mo .text-tes{
@@ -1714,6 +1714,9 @@ footer{
       padding: 20px;
       border-top-right-radius: 25px;
       border-top-left-radius: 25px;
+    }
+    .foot-text{
+      flex-direction: column;
     }
     /* About/Familiy-law/Real-estate-law/Immagration-law/Privacy-policy/Terms-of-use */
     .hero-page{
