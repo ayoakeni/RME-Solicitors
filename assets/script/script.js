@@ -128,7 +128,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // Question-answer
-const qClick = document.querySelectorAll(".question-click");
+const qClick = document.querySelectorAll(".question");
 const qCont = document.querySelectorAll(".q-content");
 
 qClick.forEach((click, index) => {
