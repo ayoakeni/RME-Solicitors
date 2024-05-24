@@ -850,7 +850,7 @@ footer{
 /* About/Familiy-law/Real-estate-law/Immagration-law/Privacy-policy/Terms-of-use */
 .hero-page{
   display: flex;
-  height: 490px;
+  height: 460px;
   background-image: linear-gradient(rgba(0,0,255,50%), rgba(0,0,255,50%) ), url(../images/judge-image.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -864,7 +864,7 @@ footer{
   font-weight: 700;
   font-style: normal;
   line-height: 119.8%;
-  margin: auto auto  auto 100px;
+  margin: auto auto  auto 70px;
 }
 .details{
   background-color: #F0F1F4;
@@ -977,10 +977,85 @@ footer{
   font-style: normal;
 }
 .about-list-img-box{
+  display: flex;
   background: lightgray;
 }
 .about-list-img-box img{
   width: 100%;
+}
+.hero-immmigration-img{
+  position: absolute;
+  right: 0;
+  display: flex;
+  width: fit-content;
+  height: auto;
+}
+.hero-immmigration-img :nth-child(1){
+  position: relative;
+  left: 21rem;
+  width: 330.5px;
+  height: 342.81px;
+}
+.hero-immmigration-img :nth-child(2){
+  position: relative;
+  top: 6rem;
+  left: 11.5rem;  
+  width: 433.27px;
+  height: 436.95px;
+  z-index: 1;
+}
+.hero-immmigration-img :nth-child(3){
+  position: relative;
+  right: 0;  
+  width: 370.11px;
+  height: 427.59px;
+}
+.immigration-box{
+  color: #595959;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 98%;
+  margin: auto;
+  padding: 20px 55px 94px;
+}
+.immigration-box .h-immg-box{
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+.immigration-box .h-immg-box:last-child{
+  margin-top: 35px;
+}
+.immigration-list-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 94px 0;
+}
+.immigration-list-img-box{
+  display: flex;
+}
+.immigration-list-img-box img{
+  width: 100%;
+}
+.immigration-list{
+  width: 61%;
+}
+.immigration-text{
+  margin-top: 34px;
+}
+.immigration-text span{
+  font-size: 24px;
+  font-weight: 600;
+}
+.immigration-text p{
+  font-size: 20px;
+  font-weight: 400;
+}
+.immigration-text li{
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 20px;
 }
 .term-welcome{
   padding-bottom: 60px;
@@ -1228,16 +1303,33 @@ footer{
   .notes-box{
     width: 100%;
   }
-  .about-info{
+  .about-info,
+  .immigration-list{
     width: 50%;
     height: 934.5px;
     overflow-y: auto;
   }
-  .about-info::-webkit-scrollbar {
+  .about-info::-webkit-scrollbar,
+  .immigration-list::-webkit-scrollbar {
     width: 5px;
   }
-  .about-info::-webkit-scrollbar-thumb {
+  .about-info::-webkit-scrollbar-thumb,
+  .immigration-list::-webkit-scrollbar-thumb  {
     border-radius: 5px;
+  }
+  .hero-immmigration-img :nth-child(1){
+    left: 17rem;
+    width: 230.5px;
+    height: 242.81px;
+  }
+  .hero-immmigration-img :nth-child(2){
+    left: 9rem;
+    width: 333.27px;
+    height: 336.95px;
+  }
+  .hero-immmigration-img :nth-child(3){
+    width: 270.11px;
+    height: 327.59px;
   }
 }
  @media (max-width: 1021px){
@@ -1253,6 +1345,7 @@ footer{
     width: 100%;
   }
   .testimonial .immg{
+    display: flex;
     width: 80%;
     height: auto;
   }
@@ -1269,8 +1362,9 @@ footer{
     background-image: none;
   }
   .hero-img{
-    display: block;
+    display: flex;
     width: 100%;  
+    background: lightgray;
   }
   .bgtext{
     width: 100%;
@@ -1302,11 +1396,12 @@ footer{
     width: 52%;
     height: 100vh;
     background: #2c3e50;
-    top: 80px;
+    top: 0;
     text-align: center;
     right: -100%;bottom: 0;
     transition: all .5s;
     margin: 0;
+    padding-top: 50px;
     overflow: auto;
   }
   nav ul :nth-child(5){
@@ -1369,6 +1464,7 @@ footer{
     font-style: normal;
     color: #fff;
     margin: auto;
+    z-index: 1;
   }
   .close-icon {
     display: none !important;
@@ -1431,8 +1527,9 @@ footer{
     background-color: #FFFFFF;
   }
   .news-text .img-text{
+    display: flex;
     width: 100%;
-    height: auto;
+    max-height: 169px;
   }
   .news-text .img-text img{
     width: 100%;
@@ -1557,7 +1654,8 @@ footer{
   .hero-page span{
     margin: auto;
   }
-  .details-box{
+  .details-box,
+  .immigration-box{
     width: 100%;
   }
   .details-term-box{
@@ -1571,11 +1669,37 @@ footer{
     row-gap: 40px;
     width: 100%;
   }
-  .about-info{
+  .hero-page-immigration{
+    flex-wrap: wrap-reverse;
+  }
+  .hero-page-immigration span{
+    margin: auto 20px;
+  }
+  .hero-immmigration-img{
+    position: relative;
+  }
+  .hero-immmigration-img :nth-child(1){
+    left: 1rem;
+  }
+  .hero-immmigration-img :nth-child(2){
+    left: -7rem;  
+  }
+  .hero-immmigration-img :nth-child(3){
+    right: 16rem;  
+  }
+  .immigration-list-box{
+    flex-wrap: wrap-reverse;
+    row-gap: 54px;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .about-info,
+  .immigration-list{
     width: 100%;
     height: auto;
   }
-  .about-list-txt-img{
+  .about-list-txt-img,
+  .immigration-list-img-box{
     width: 100%;
   }
   .about-list-txt span{
@@ -1597,6 +1721,9 @@ footer{
       width: 100%;
       margin: 0 0 30px;
     }
+    .news-text .img-text{
+      max-height: 178px;
+    }
     .swiper-slide {
       width: auto;
     }
@@ -1614,6 +1741,11 @@ footer{
     }
     .book-consult{
       padding: 30px;
+    }
+  }
+  @media (max-width: 599px){
+    .news-text .img-text{
+      max-height: 205px;
     }
   }
   @media  (max-width: 545px) {
@@ -1733,7 +1865,8 @@ footer{
     .details-term-box{
       padding-top: 20px 0px;
     }
-    .about-list-box{
+    .about-list-box,
+    .immigration-box{
       padding: 20px;
     }
     .about-list-txt{
@@ -1742,6 +1875,21 @@ footer{
     }
     .about-list-txt span{
       font-size: 39.98px;
+    }
+    .hero-immmigration-img :nth-child(1){
+      width: 130.5px;
+      height: 142.81px;
+    }
+    .hero-immmigration-img :nth-child(2){
+      top: 4rem;
+      left: -5rem;
+      width: 183.27px;
+      height: 186.95px;
+    }
+    .hero-immmigration-img :nth-child(3){
+      right: 10rem;
+      width: 160.11px;
+      height: 177.59px;
     }
     .term-book-consult{
       width: 90%;
@@ -1766,6 +1914,9 @@ footer{
     .text-tes1 i{
       display: none;
     }
+    .news-text .img-text{
+      max-height: 178px;
+    }
     .book-consult{
       padding: 25px;
     }
@@ -1782,6 +1933,9 @@ footer{
     }
     .layer-info .bgtext h1 span{
       font-size: 27px;
+    }
+    .news-text .img-text{
+      max-height: 140px;
     }
     .book-consult h4 br{
       display: none;

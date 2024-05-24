@@ -23,9 +23,9 @@ const bodyMessage = `Full Name: ${name.value}<br> Email: ${email.value}
 <br> Surname: ${surname.value}<br> Phone Number: ${phone.value}<br>Message: ${message.value}`;
 
   Email.send({
-    SecureToken : "c738c4a7-880e-42d4-be32-3f4a8d75d935",
-    To : 'ayoakeni64@gmail.com',
-    From : "akeniayowunmi@gmail.com",
+    SecureToken : "72112595-5e01-408e-963c-c0809cbee30d",
+    To : 'rme_solicitors@yahoo.com',
+    From : "info@rmesolicitors.com",
     Subject : "Enquiry from Rme Solicitors",
     Body : bodyMessage
   }).then(

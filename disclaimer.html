@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Real estate">
+    <meta name="description" content="Disclaimer">
     <title>RME Solicitors</title>
-    <link rel="icon" href="../assets/logo/logo.png">
+    <link rel="icon" href="assets/logo/logo.png">
     <link rel="icon" href="logo/logo.png">
     <!-- Css link -->
-    <link rel="stylesheet" href="../assets/style/all.css">
+    <link rel="stylesheet" href="assets/style/all.css">
     <!-- Google Font -->
     <!-- Source san font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -21,10 +21,19 @@
     <!-- Font icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH149FKZMZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PH149FKZMZ');
+    </script>
   </head>
   <body>
     <div class="loading-screen">
-      <img class="load-logo" src="../assets/logo/R-logo.png" alt="Logo">
+      <img class="load-logo" src="assets/logo/R-logo.png" alt="Logo">
       <div class="loading-circle-animation">
         <div class="loading-circle"></div>
         <div class="loading-circle"></div>
@@ -39,56 +48,65 @@
           <i class="close-icon fa-solid fa-xmark"></i>
         </label>
         <div class="logo">
-          <a href="../index.html"><img src="../assets/logo/Frame 226.png"></a>
+          <a href="home.html"><img src="assets/logo/Frame 226.png"></a>
         </div>
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <input class="check-drop" type="checkbox" id="drop">
           <li class="drop-service">
-            <span class="dp-service active">
+            <span class="dp-service">
               <label for="drop">Services<i class="chevron fa-solid fa-chevron-down"></i></label>
             </span>
             <ul class="drop-down">
               <li><a href="family-law.html">Family Law</a></li>
-              <li><a class="drop-active" href="#real">Real Estate Law</a></li>
+              <li><a href="real-estate-law.html">Real Estate Law</a></li>
               <li><a href="immigration-law.html">Immigration Law</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="hero-page" id="real">
-        <span>Real Estate Law</span>
+      <div class="hero-page" id="disclaimer">
+        <span>Disclaimer</span>
       </div>
       <main>
         <div class="details">
           <div class="details-box">
             <p>
-              <b>RME Solicitors is a leading law firm specializing in family law, real estate law, and immigration law. With a team 
-              of experienced solicitors, RME Solicitors provides expert legal services to individuals and businesses across a wide range of legal matters.</b><br><br>
-              RME Solicitors is a distinguished law firm renowned for its expertise in family law, real estate law, and immigration law. With a rich history 
-              of providing exceptional legal services, RME Solicitors has established itself as a trusted partner for individuals and businesses seeking 
-              comprehensive and personalized legal solutions.<br>
-              Founded in September 2013, RME Solicitors has grown to become a leading legal firm known for its dedication to excellence and commitment to client 
-              satisfaction. Our team of experienced solicitors has successfully handled a wide range of cases, earning a reputation for delivering results 
-              with integrity and professionalism.<br><br>
+              The information provided on the RME Solicitors website is for general informational purposes only. It is not intended to constitute legal advice 
+              or to create a solicitor-client relationship..<br><br>
+              While we make every effort to ensure the accuracy and reliability of the information presented on our website, we cannot guarantee that it is 
+              always up to date or complete. Therefore, you should not rely solely on the information provided on this website when making legal decisions.<br>
+              Visiting our website or contacting us through the website does not create a solicitor-client relationship. Such a relationship can only be 
+              established through a formal agreement with RME Solicitors.<br><br>
+              We recommend seeking professional legal advice from a qualified solicitor before making any decisions based on the information provided on our website. 
+              RME Solicitors disclaims any liability for any loss or damage arising from reliance on the information contained on this website.
+              Please note that the law is subject to change and may vary depending on your jurisdiction. Therefore, it is important to consult 
+              with a solicitor who is familiar with the laws applicable to your specific situation.<br><br>
+              If you have any questions or concerns about the information provided on our website, please contact us at <a href="mailto:rme_solicitors@yahoo.com">rme_solicitors@yahoo.com</a>.
             </p>
           </div>
+        </div>
+        <div class="book-consult">
+          <h4>Schedule an <br> immigration consultation <br> with RME Solicitors</h4>
+          <button>
+            <a href="home.html?id=book">Book a Consultation</a>
+          </button>
         </div>
       </main>
         <footer>
           <div class="foot-text">
             <div class="foot-text-immg">
-              <a href="../index.html"><img src="../assets/logo/R-logo.png" alt="logo"></a>
+              <a href="home.html"><img src="assets/logo/R-logo.png" alt="logo"></a>
             </div>
             <div class="foot-text1">
               <span>Quick Links</span>
               <ul class="foot-text1-opt">
-                <a href="../index.html">Home</a>
+                <a href="home.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="privacy-policy.html">Privacy-policy</a>
-                <a href="../index.html?id=faq">FAQ</a>
+                <a href="home.html?id=faq">FAQ</a>
               </ul>
             </div>
             <div class="foot-text2" id="contact">
@@ -113,7 +131,7 @@
             <span>COPYRIGHT © 2024 RME SOLICITORS</span>
             <span><a href="privacy-policy.html">PRIVACY POLICY</a></span>
             <span><a href="terms-of-use.html">TERMS OF USE</a></span>
-            <span><a href="disclaimer.html">DISCLAIMER</a></span>
+            <span><a href="#disclaimer">DISCLAIMER</a></span>
           </div>
         </footer>
         <!-- Whatsapp chat-box -->
@@ -121,7 +139,7 @@
           <div class="whatsapp-box">
             <div class="whatsapp-header">
               <div class="whatsapp-profile">
-                <img class="whatsapp-img" src="../assets/images/pen.png">
+                <img class="whatsapp-img" src="assets/images/pen.png">
                 <span class="whatsapp-online-status"></span>
               </div>
               <div class="whatsapp-title">
@@ -146,6 +164,6 @@
       </div>
     </div>
     <!-- Java Script -->
-    <script src="../assets/script/script.js"></script>
+    <script src="assets/script/script.js"></script>
   </body>
 </html>
