@@ -21,10 +21,14 @@ window.addEventListener('load', function() {
   // Fallback: Hide the loading screen after 3 seconds
   setTimeout(function() {
     let loadIndex = document.querySelector('.loading-screen');
-    loadIndex.style.opacity = '0';
-    loadIndex.style.zIndex = '-1';
+    if (loadIndex) {
+      loadIndex.style.opacity = '0';
+      loadIndex.style.zIndex = '-1';
+    }
     // Show the content
-    document.querySelector('.content').style.opacity = '1';
+    if (document.querySelector('.content')) {
+      document.querySelector('.content').style.opacity = '1';
+    }
   }, 3000); // 3 seconds delay
 });
 
@@ -33,10 +37,14 @@ document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
     // If the content is fully loaded before the 3-second delay, hide the loading screen immediately
     let loadIndex = document.querySelector('.loading-screen');
-    loadIndex.style.opacity = '0';
-    loadIndex.style.zIndex = '-1';
+    if (loadIndex) {
+      loadIndex.style.opacity = '0';
+      loadIndex.style.zIndex = '-1';
+    }
     // Show the content
-    document.querySelector('.content').style.opacity = '1';
+    if (document.querySelector('.content')) {
+      document.querySelector('.content').style.opacity = '1';
+    }
   }
 };
 
