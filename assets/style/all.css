@@ -5,7 +5,7 @@
 }
 body{
   background: #F2F4F3;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -1677,6 +1677,7 @@ footer{
   }
   .hero-immmigration-img{
     position: relative;
+    width: 100%;
   }
   .hero-immmigration-img :nth-child(1){
     left: 1rem;
