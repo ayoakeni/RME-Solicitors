@@ -154,7 +154,7 @@ nav a.active,
 .drop-service .active,
 nav ul a:hover{
   background: #fff;
-  color: #000;
+  color: #444D4B;
 }
 .drop-service:hover > .dp-service{
   background: #fff;
@@ -216,11 +216,9 @@ li:hover > ul{
   flex-direction: column;
   margin-top: 80px;
   width: 100%;
-  background: #F8F3EA;
-  background-image: linear-gradient(-280deg, #F8F3EA, #F2F4F3, 
-  rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), 
-  rgba(0,0,0,0), rgba(0,0,0,0)), url(../images/hero-img.jpg);
-  background-size: calc(1050px);
+  background: #F3F3F6;
+  background-image: url(../images/hero-png-img.png);
+  background-size: contain;
   background-position: calc(120%);
   background-repeat: no-repeat;
   height: auto;
@@ -251,10 +249,11 @@ li:hover > ul{
   font-family: "Playfair Display", serif;
   font-weight: 900;
   font-style: normal;
+  color: #15347D;
   margin-bottom: 12px;
 }
 .layer-info .bgtext h1 span{
-  color: #9D8341;
+  color: #4169E1;
   font-size: 64px;
   font-family: "Playfair Display", serif;
   font-weight: 900;
@@ -294,12 +293,12 @@ li:hover > ul{
   margin-top: -26px;
 }
 .hero-opt{
-  background-color: #F8F3EA;
+  background-color: #F3F3F6;
   border-radius: 14.6px;
-  box-shadow: 1px 10px 8px lightgray;
+  box-shadow: 1px 8px 10px #4B4A57;
 }
 .hero-opt a{
-  color: #C6AE78;
+  color: #4B4A57;
   font-size: 20px;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
@@ -327,7 +326,7 @@ li:hover > ul{
   padding: 80px 55px;
 }
 .welcome-note h2{
-  color: #4269E1;
+  color: #393842;
   font-size: 36px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -358,7 +357,7 @@ li:hover > ul{
   width: 90%;
 }
 .text-mo .testimon{
-  color: #191B20;
+  color: #15347D;
   font-size: 58px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -381,36 +380,35 @@ li:hover > ul{
   color: #15347D;
   line-height: 90px !important;
 }
+.text-tes b{
+  font-weight: 800;
+}
 .txt-text{
   width: 75%;
-  font-size: 16px;
   font-family: "Lato", sans-serif;
-  font-weight: 500;
   font-style: normal;;
   height: fit-content;
-  padding: 23px;
+  padding: 22px 27px;
+  background-color: #EFF5F5;
 }
 .text-tes2{
   width: 88%;
   color: #fff;
-  font-size: 16px;
   font-family: "Lato", sans-serif;
-  font-weight: 500;
   font-style: normal;
   background-color: #15347D;
   height: fit-content;
-  padding: 23px;
+  padding: 22px 27px;
   margin-bottom: 20px;
 }
 .text-tes3{
   float: right;
   width: 96%;
-  font-size: 16px;
   font-family: "Lato", sans-serif;
-  font-weight: 500;
   font-style: normal;
   height: fit-content;
-  padding: 23px;
+  padding: 22px 27px;
+  background-color: #EFF5F5;
 }
 .news{
   padding: 73px 0px;
@@ -800,9 +798,9 @@ footer{
 }
 .foot-text2-opt{
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Source Sans 3", sans-serif;
-  font-weight: 200;
+  font-weight: 600;
   font-style: normal;
   text-decoration: none;
 }
@@ -811,6 +809,7 @@ footer{
   display: block;
   color: #FFFFFF;
   font-size: 14px;
+  font-weight: 200;
   text-decoration: none;
   transition: all .5s;
 }
@@ -824,6 +823,9 @@ footer{
   color: #fff;
   transition: all .5s;
   margin-right: 5px;
+}
+.socials-handle i{
+
 }
 .copy-right{
   padding-top: 28px;
