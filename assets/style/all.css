@@ -118,7 +118,8 @@ nav{
   top: 0;
   background: #4169E1;
   width: 100%;
-  z-index: 3;
+  transition: top 0.5s;
+  z-index: 99;
   padding: 0px 8%;
 }
 nav .logo{

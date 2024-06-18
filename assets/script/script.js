@@ -73,6 +73,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+// Navbar for scroll detection
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scroll down
+    navbar.style.top = '-100px'; // Adjust this value based on your nav height
+  } else {
+    // Scroll up
+    navbar.style.top = '0';
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
 
 // Nav bar for mobile when clicked outside the menu-bar "close the menu bar"
 var menuToggle = document.getElementById("menu-toggle");
