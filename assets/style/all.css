@@ -824,9 +824,6 @@ footer{
   transition: all .5s;
   margin-right: 5px;
 }
-.socials-handle i{
-
-}
 .copy-right{
   padding-top: 28px;
   border-top: 1px solid #E1C5A1;
@@ -876,11 +873,15 @@ footer{
   background-size: contain;
 }
 .details-box{
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   width: 98%;
   margin: auto;
   padding: 20px 55px;
 }
 .details-term-box{
+  color: #55615E;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -888,7 +889,7 @@ footer{
   margin-top: 34px;
 }
 .details-box span{
-  color: #000000;
+  color: #595959;
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
@@ -1019,7 +1020,7 @@ footer{
   font-style: normal;
   width: 98%;
   margin: auto;
-  padding: 20px 55px 94px;
+  padding: 20px 55px;
 }
 .immigration-box .h-immg-box{
   font-size: 20px;
@@ -1054,9 +1055,49 @@ footer{
   font-size: 20px;
   font-weight: 400;
 }
+.immigration-1,
+.privacy-1{
+  margin-left: 35px;
+}
 .immigration-text li{
   font-size: 20px;
   font-weight: 400;
+}
+.family span{
+  font-size: 20px;
+  font-weight: 400;
+  color:#595959;
+}
+.family li{
+  font-size: 20px;
+  font-weight: 400;
+  color:#595959;
+  line-height: 25.14px;
+}
+.fam-1{
+  list-style: none;
+}
+.fam-2{
+  margin-left: 30px;
+}
+.real,
+.real span{
+  font-size: 20px;
+  font-weight: 400;
+  color:#595959;
+}
+.real .real-1,
+.real .real-2{
+  margin-left: 10px;
+}
+.real-1 li{
+  font-size: 20px;
+  font-weight: 400;
+  color:#595959;
+  line-height: 25.14px;
+  margin-left: 47px;
+}
+.real-2 li{
   margin-left: 20px;
 }
 .term-welcome{
